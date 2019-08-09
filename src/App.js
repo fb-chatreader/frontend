@@ -5,6 +5,7 @@ import './App.css';
 import Chat from './Components/Chat';
 import books from './dummyData';
 import { LandingPage } from './Components/Landing';
+import { Categories } from './Components/Categories';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <div className='App'>
         <Route exact path='/' component={LandingPage} />
         <Route path='/messenger' component={Chat}/>
+        <Route path='/categories' component={Categories}/>
       </div>
     </Router>
   );
