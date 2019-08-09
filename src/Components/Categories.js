@@ -9,7 +9,10 @@ export function Categories() {
         <div className='categories-container'>
             {categories.map(category => {
                 return (
-                    <div>{category}</div>
+                    <div className='category-container'>
+                        <input type="checkbox"/>
+                        <div>{category}</div>
+                    </div>
                 )
             })}
         </div>    
