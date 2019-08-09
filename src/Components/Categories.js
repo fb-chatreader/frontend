@@ -7,9 +7,9 @@ export function Categories() {
     console.log(typeof(categories));
     return (
         <div className='categories-container'>
-            {categories.map(cat => {
+            {categories.map(category => {
                 return (
-                    <div>{cat}</div>
+                    <div>{category}</div>
                 )
             })}
         </div>    
