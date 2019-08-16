@@ -1,12 +1,5 @@
 [build]
-/               /
-/messenger      /messenger
-/categories     /categories
-/recommendation /recommendation
-/privacy        /privacy
-/tos            /tos
-
-base = "/"
-publish = "/frontend/build"
+base = "./"
+publish = "/build/"
 command = "yarn build"
 
