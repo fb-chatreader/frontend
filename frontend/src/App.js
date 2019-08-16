@@ -8,6 +8,7 @@ import books from './dummyData';
 import { LandingPage } from './Components/Landing';
 import { Categories } from './Components/Categories';
 import { Privacy } from './Components/PrivacyPolicy';
+import {TermsOfService} from './Components/TermsOfService'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path='/categories' component={Categories}/>
         <Route path='/recommendation' component={Recommendation} />
         <Route path='/privacy' component={Privacy}/>
+        <Route path='/toc' component={TermsOfService} />
       </div>
     </Router>
   );
