@@ -3,10 +3,12 @@ import {BrowserRouter as Router, Route } from 'react-router-dom';
 
 import './App.css';
 import Chat from './Components/Chat';
-import Recommendation from './Components/RecommendationPage'
+// import Recommendation from './Components/RecommendationPage'
 import books from './dummyData';
 import { LandingPage } from './Components/Landing';
 import { Categories } from './Components/Categories';
+import { Privacy } from './Components/Privacy';
+import { TermsOfService } from './Components/TermsOfServicece';
 
 function App() {
   return (
@@ -15,10 +17,10 @@ function App() {
         <Route exact path='/' component={LandingPage} />
         <Route path='/messenger' component={Chat}/>
         <Route path='/categories' component={Categories}/>
-        <Route path='/recommendation' component={Recommendation} />
-        <Route path='/tos' component= {TermOfService} />
-        <Route path='/privacy' component= {Privacy} />
-        div>
+        {/* <Route path='/recommendation' component={Recommendation} /> */}
+        <Route path='/tos' component={TermsOfService} />
+        <Route path='/privacy' component={Privacy} />
+        </div>
     </Router>
   );
 }
