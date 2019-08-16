@@ -7,6 +7,7 @@ import Recommendation from './Components/RecommendationPage'
 import books from './dummyData';
 import { LandingPage } from './Components/Landing';
 import { Categories } from './Components/Categories';
+import { Privacy } from './Components/PrivacyPolicy';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path='/messenger' component={Chat}/>
         <Route path='/categories' component={Categories}/>
         <Route path='/recommendation' component={Recommendation} />
+        <Route path='/privacy' component={Privacy}/>
       </div>
     </Router>
   );
