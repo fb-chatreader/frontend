@@ -8,7 +8,7 @@ import books from './dummyData';
 import { LandingPage } from './Components/Landing';
 import { Categories } from './Components/Categories';
 import { Privacy } from './Components/Privacy';
-import { TermsOfService } from './Components/TermsOfServicece';
+import { TermsOfService } from './Components/TermsOfService';
 
 function App() {
   return (
