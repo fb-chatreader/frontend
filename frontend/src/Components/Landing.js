@@ -1,13 +1,17 @@
-import React, {useReducer} from 'react';
+import React, { useReducer } from 'react';
 import { initialState, reducer } from '../reducer';
 
 export function LandingPage() {
   const [state, dispatch] = useReducer(reducer, initialState);
   return (
-    <div className="landing-container">
-      <img src={require('../images/ChatBook.png')} alt="Logo"/>
-      <div onClick={() => dispatch({type: 'login'})}>Login</div>
-      <div onClick={() => dispatch({type: 'signUp'})}>signUp</div>
+    <div className='landing-container'>
+      <img src={require('../images/ChatBook.png')} alt='Logo' />
+      <Link to={``} activeClassName='active'>
+        <div>Take to Messenger App</div>
+      </Link>
+
+      <div onClick={() => dispatch({ type: 'login' })}>Login</div>
+      <div onClick={() => dispatch({ type: 'signUp' })}>signUp</div>
     </div>
-  )
+  );
 }
