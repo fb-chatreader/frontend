@@ -2,3 +2,10 @@
 base = "/"
 publish = "/frontend/build"
 command = "yarn build"
+
+/
+/messenger
+/categories
+/recommendation
+/privacy
+/tos
