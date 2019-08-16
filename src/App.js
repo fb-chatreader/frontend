@@ -16,7 +16,9 @@ function App() {
         <Route path='/messenger' component={Chat}/>
         <Route path='/categories' component={Categories}/>
         <Route path='/recommendation' component={Recommendation} />
-      </div>
+        <Route path='/tos' component= {TermOfService} />
+        <Route path='/privacy' component= {Privacy} />
+        div>
     </Router>
   );
 }
