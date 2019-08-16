@@ -19,7 +19,7 @@ function App() {
         <Route path='/categories' component={Categories}/>
         <Route path='/recommendation' component={Recommendation} />
         <Route path='/privacy' component={Privacy}/>
-        <Route path='/toc' component={TermsOfService} />
+        <Route path='/tos' component={TermsOfService} />
       </div>
     </Router>
   );
