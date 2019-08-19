@@ -67,6 +67,6 @@ class PasswordForgetFormBase extends Component {
 
 export default PasswordForgetPage;
 
-const PasswordForgetForm = withFirebase(PasswordForgetForm);
+const PasswordForgetForm = withFirebase(PasswordForgetFormBase);
 
 export { PasswordForgetForm };
