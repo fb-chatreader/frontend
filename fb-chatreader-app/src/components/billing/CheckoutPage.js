@@ -51,7 +51,7 @@ class CheckoutPage extends Component {
                             <OneTimeCheckout 
                                 name={'ChatReader Single Page Checkout'}
                                 description={'ChatReader Single Page Checkout'}
-                                amount={20000}
+                                amount={2000}
                             /> 
                         </CardContent>
                     </Card>
