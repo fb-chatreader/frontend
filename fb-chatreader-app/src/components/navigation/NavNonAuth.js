@@ -8,6 +8,9 @@ const NavNonAuth = () => (
             <NavLink to="/" className="nav-link">
                 Home
             </NavLink>
+            <NavLink to="/checkout" className="nav-link">
+                Checkout
+            </NavLink>
         </div>
     </div>
 );

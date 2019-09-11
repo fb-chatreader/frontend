@@ -1,3 +1,13 @@
 .navbar-container {
 	background-color: lightgrey;
 }
+
+.nav-link {
+	text-decoration: none;
+	color: blue;
+	margin: 5px;
+}
+
+.nav-link:hover {
+	color: white;
+}
