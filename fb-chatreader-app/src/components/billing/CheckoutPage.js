@@ -5,14 +5,11 @@ import { withStyles } from "@material-ui/core/styles";
 import OneTimeCheckout from './OneTimeCheckout';
 
 import {
-    Grid,
     Card,
     CardContent,
     CardHeader,
     Typography,
-  } from '@material-ui/core';
-
-
+} from '@material-ui/core';
 
 // import axios from 'axios';
 
@@ -38,7 +35,6 @@ class CheckoutPage extends Component {
     };
 
     render() {
-        const { rental } = this.state;
         return (
             <div className="checkout-page">
                 <div className="checkout-panel">
