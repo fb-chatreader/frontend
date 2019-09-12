@@ -41,7 +41,7 @@ class NewSubCheckout extends Component {
 
     return (
       <div className="new-sub-checkout-form">
-        <p>Would you like to complete the purchase?</p>
+        <p>Enter card details to purchase Monthly Subscription:</p>
         <CardElement />
         <button onClick={this.submit}>Submit</button>
       </div>
