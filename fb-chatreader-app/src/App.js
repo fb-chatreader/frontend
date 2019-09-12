@@ -6,7 +6,6 @@ import LandingPage from './components/LandingPage';
 // import CheckoutPage from './components/billing/CheckoutPage';
 import SubCheckoutPage from './components/billing/SubCheckoutPage';
 
-
 import './App.css';
 
 function App() {
