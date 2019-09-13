@@ -18,25 +18,20 @@ class NewSubCheckout extends Component {
     console.log('tokenID:', token.id);
     const { planID } = this.props.match.params;
     console.log('planID: ', planID);
-    // let response = await fetch("/charge", {
-    //   method: "POST",
-    //   headers: {"Content-Type": "text/plain"},
-    //   body: token.id
-    // });
 
     const subData = {
       source: token.id,
       planID
     };
 
-    // axios.post('/api/billing/checkout/newsub', subData)
-    //   .then(response => {
-    //     console.log(response);
-    //     this.setState({complete: true});
-    //   })
-    //   .catch(error => {
-    //     console.log(error.message);
-    //   })
+    axios.post('/api/billing/checkout/newsub', subData)
+      .then(response => {
+        console.log(response);
+        this.setState({complete: true});
+      })
+      .catch(error => {
+        console.log(error.message);
+      })
   }
 
   render() {
