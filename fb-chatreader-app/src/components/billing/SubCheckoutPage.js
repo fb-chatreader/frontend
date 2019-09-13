@@ -15,6 +15,7 @@ class SubCheckoutPage extends Component {
         axios.get('api/billing/productsandplans')
             .then(response => {
                 console.log(response);
+                this.setState({ products: response.data })
             })
             .catch(error => {
                 console.log(error);
@@ -22,34 +23,44 @@ class SubCheckoutPage extends Component {
     }
 
     render() {
+        const { products } = this.state;
         return (
             <StripeProvider apiKey='pk_test_szSIHpMw6NMiX62i8aL5W82t00VdTotHmW'>
                 <Elements>
-                <div className='customer-view'>
+                <div classNameName='subcheckoutpage'>
                     Products go here
-                    {/* <div class='customer-view-products'>
-                    <h2>{product.name}</h2>
-                    <div class='customer-view-plans'>
-                        <div class='customer-view-plan'>
-                        <form action='/signUp' method='POST'>
-                            <input hidden value={ product.name} name='productName'/>
-                            <input hidden value={ plan.id} name='planId'/>
-                            <input hidden value={ plan.nickname} name='planName'/>
-                            <input hidden value={ plan.amount} name='planAmount'/>
-                            <input hidden value={ plan.interval} name='planInterval'/>
-                            <input hidden value={ plan.interval_count} name='planIntervalCount'/>
-                            <h3>{plan.nickname} {plan.amount}  
-                                {plan.interval_count > 1 ? (
-                                    <span>{plan.interval_count} {plan.interval}s</span>
-                                ) : (
-                                    <span>{plan.interval}</span>
-                                )}     
-                            </h3>
-                            <input class='btn' type='submit' value='Sign Up'/>
-                        </form>
-                        </div>
+                    <div className='products-container'>
+                            {products.map((product, index) => (
+                                <div className='product-container' key ={index}>
+                                    <h2>{product.name}</h2>
+
+                                    <div className='plans-container'>
+                                        {product.plans.map((plan, index) => (
+                                            <div className='plan-container' key={index}>
+                                            <form action='/signUp' method='POST'>
+                                                <input hidden value={ product.name} name='productName'/>
+                                                <input hidden value={ plan.id} name='planId'/>
+                                                <input hidden value={ plan.nickname} name='planName'/>
+                                                <input hidden value={ plan.amount} name='planAmount'/>
+                                                <input hidden value={ plan.interval} name='planInterval'/>
+                                                <input hidden value={ plan.interval_count} name='planIntervalCount'/>
+                                                <h3>{plan.nickname} {plan.amount}  
+                                                    {plan.interval_count > 1 ? (
+                                                        <span>{plan.interval_count} {plan.interval}s</span>
+                                                    ) : (
+                                                        <span>{plan.interval}</span>
+                                                    )}     
+                                                </h3>
+                                                <input className='btn' type='submit' value='Sign Up'/>
+                                            </form>
+                                            </div>
+                                        ))}
+                                        
+                                    </div>
+                                </div>
+                            ))}
+                    
                     </div>
-                    </div> */}
                 </div>
               </Elements>
             </StripeProvider>
