@@ -3,6 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import axios from 'axios';
+
+axios.defaults.baseURL =
+  process.env.NODE_ENV === 'production'
+    ? 'http://localhost:8000'
+    : 'http://localhost:8000';
 
 ReactDOM.render(<App />, document.getElementById('root'));
 

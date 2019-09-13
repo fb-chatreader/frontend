@@ -12,7 +12,7 @@ class SubCheckoutPage extends Component {
     };
 
     componentDidMount() {
-        axios.get('/api/billing/productsandplans')
+        axios.get('api/billing/productsandplans')
             .then(response => {
                 console.log(response);
             })
@@ -20,13 +20,14 @@ class SubCheckoutPage extends Component {
                 console.log(error);
             })
     }
-    
+
     render() {
         return (
             <StripeProvider apiKey='pk_test_szSIHpMw6NMiX62i8aL5W82t00VdTotHmW'>
                 <Elements>
-                <div class='customer-view'>
-                    <div class='customer-view-products'>
+                <div className='customer-view'>
+                    Products go here
+                    {/* <div class='customer-view-products'>
                     <h2>{product.name}</h2>
                     <div class='customer-view-plans'>
                         <div class='customer-view-plan'>
@@ -48,7 +49,7 @@ class SubCheckoutPage extends Component {
                         </form>
                         </div>
                     </div>
-                    </div>
+                    </div> */}
                 </div>
               </Elements>
             </StripeProvider>
