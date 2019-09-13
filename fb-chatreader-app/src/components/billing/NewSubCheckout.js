@@ -13,8 +13,11 @@ class NewSubCheckout extends Component {
   }
 
   async submit(event) {
-    let { token } = await this.props.stripe.createToken({ name: "New Subscription" });
+    const { token } = await this.props.stripe.createToken({ name: "New Subscription" });
     console.log('token:', token);
+    console.log('tokenID:', token.id);
+    const { planID } = this.props.match.params;
+    console.log('planID: ', planID);
     // let response = await fetch("/charge", {
     //   method: "POST",
     //   headers: {"Content-Type": "text/plain"},
@@ -22,18 +25,18 @@ class NewSubCheckout extends Component {
     // });
 
     const subData = {
-      tokenID: token.id
+      source: token.id,
+      planID
     };
-    console.log('tokenID:', token.id);
 
-    axios.post('/api/billing/checkout/newsub', subData)
-      .then(response => {
-        console.log(response);
-        this.setState({complete: true});
-      })
-      .catch(error => {
-        console.log(error.message);
-      })
+    // axios.post('/api/billing/checkout/newsub', subData)
+    //   .then(response => {
+    //     console.log(response);
+    //     this.setState({complete: true});
+    //   })
+    //   .catch(error => {
+    //     console.log(error.message);
+    //   })
   }
 
   render() {
