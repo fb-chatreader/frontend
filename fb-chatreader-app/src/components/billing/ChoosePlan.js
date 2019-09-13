@@ -3,7 +3,7 @@ import { Elements, StripeProvider } from 'react-stripe-elements';
 import NewSubCheckout from './NewSubCheckout';
 import axios from 'axios';
 
-class SubCheckoutPage extends Component {
+class ChoosePlan extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -27,7 +27,7 @@ class SubCheckoutPage extends Component {
         return (
             <StripeProvider apiKey='pk_test_szSIHpMw6NMiX62i8aL5W82t00VdTotHmW'>
                 <Elements>
-                <div classNameName='subcheckoutpage'>
+                <div classNameName='chooseplan-page'>
                     Products go here
                     <div className='products-container'>
                             {products.map((product, index) => (
@@ -55,7 +55,7 @@ class SubCheckoutPage extends Component {
                                             </form>
                                             </div>
                                         ))}
-                                        
+
                                     </div>
                                 </div>
                             ))}
@@ -68,4 +68,4 @@ class SubCheckoutPage extends Component {
     }
 }
 
-export default SubCheckoutPage;
+export default ChoosePlan;

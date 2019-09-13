@@ -8,7 +8,7 @@ const NavNonAuth = () => (
             <NavLink exact to='/' className='nav-link' activeStyle={{ color: 'black' }}>
                 Home
             </NavLink>
-            <NavLink to='/checkout' className='nav-link' activeStyle={{ color: 'black' }}>
+            <NavLink to='/chooseplan' className='nav-link' activeStyle={{ color: 'black' }}>
                 Checkout
             </NavLink>
         </div>

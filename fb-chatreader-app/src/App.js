@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import NavBar from './components/navigation/NavBar';
 import LandingPage from './components/LandingPage';
 // import CheckoutPage from './components/billing/CheckoutPage';
-import SubCheckoutPage from './components/billing/SubCheckoutPage';
+import ChoosePlan from './components/billing/ChoosePlan';
 
 import './App.css';
 
@@ -14,7 +14,7 @@ function App() {
       <div className="App">
         <NavBar />
         <Switch>
-          <Route exact path='/checkout' component={SubCheckoutPage} />
+          <Route exact path='/chooseplan' component={ChoosePlan} />
           <Route exact path='/' component={LandingPage} />
         </Switch>
       </div>
