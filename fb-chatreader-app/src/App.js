@@ -19,7 +19,7 @@ function App() {
           <NavBar />
           <Switch>
             <Route exact path='/chooseplan' component={ChoosePlan} />
-            <Route exact path='/newsubcheckout' component={NewSubCheckout} />
+            <Route exact path='/checkout/newsub/:planID' component={NewSubCheckout} />
             <Route exact path='/' component={LandingPage} />
           </Switch>
         </div>
