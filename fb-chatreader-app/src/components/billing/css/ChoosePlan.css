@@ -1,0 +1,14 @@
+.chooseplan-page .product-container {
+	border: 1px solid blue;
+	margin: 20px;
+}
+
+.chooseplan-page .plans-container {
+	border: 1px solid greenyellow;
+	margin: 10px;
+}
+
+.chooseplan-page .plan-container {
+	border: 1px solid red;
+	margin: 20px;
+}
