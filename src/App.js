@@ -1,25 +1,21 @@
 import React from 'react';
-import {BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
+import NavBar from './components/navigation/NavBar';
+import LandingPage from './components/LandingPage';
+import CheckoutPage from './components/billing/CheckoutPage';
 
 import './App.css';
-import Chat from './Components/Chat';
-import Recommendation from './Components/RecommendationPage'
-import books from './dummyData';
-import { LandingPage } from './Components/Landing';
-import { Categories } from './Components/Categories';
-import { Privacy } from './Components/PrivacyPolicy';
-import {TermsOfService} from './Components/TermsOfService'
 
 function App() {
   return (
     <Router>
-      <div className='App'>
-        <Route exact path='/' component={LandingPage} />
-        <Route path='/messenger' component={Chat}/>
-        <Route path='/categories' component={Categories}/>
-        <Route path='/recommendation' component={Recommendation} />
-        <Route path='/privacy' component={Privacy}/>
-        <Route path='/tos' component={TermsOfService} />
+      <div className="App">
+        <NavBar />
+        <Switch>
+          <Route exact path='/checkout' component={CheckoutPage} />
+          <Route exact path='/' component={LandingPage} />
+        </Switch>
       </div>
     </Router>
   );
