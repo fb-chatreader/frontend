@@ -1,0 +1,12 @@
+.new-sub-checkout-page {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	/* max-width: 350px;
+	padding: 20px; */
+}
+
+.cardelement-container {
+	height: 50px;
+	width: 300px;
+}
