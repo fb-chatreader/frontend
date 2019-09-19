@@ -52,7 +52,7 @@ class ChoosePlan extends Component {
                                                     )}     
                                                 </h3>
                                                 {/* <input className='btn' type='submit' value='Sign Up'/> */}
-                                                <Link exact to={`/checkout/newsub/${plan.id}`}>
+                                                <Link exact to={`/checkout/newsub/${plan.nickname}/${plan.id}`}>
                                                     <button>
                                                         Select Plan
                                                     </button>
