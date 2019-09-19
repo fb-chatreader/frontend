@@ -21,7 +21,8 @@ class NewSubCheckout extends Component {
 
     const subData = {
       source: token.id,
-      planID
+      planID,
+      facebook_id: 'abc123'   // hard-coded to match test user in database
     };
 
     axios.post('/api/billing/checkout/newsub', subData)
@@ -38,9 +39,11 @@ class NewSubCheckout extends Component {
     if (this.state.complete) return <h1>Purchase Complete</h1>;
 
     return (
-      <div className="new-sub-checkout-form">
+      <div className="new-sub-checkout-page">
         <p>Enter card details to purchase Monthly Subscription:</p>
-        <CardElement />
+        <div className="cardelement-container">
+          <CardElement />
+        </div>
         <button onClick={this.submit}>Submit</button>
       </div>
     );
