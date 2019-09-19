@@ -36,11 +36,12 @@ class NewSubCheckout extends Component {
   }
 
   render() {
+    const { planNickname } = this.props.match.params;
     if (this.state.complete) return <h1>Purchase Complete</h1>;
 
     return (
       <div className="new-sub-checkout-page">
-        <p>Enter card details to purchase Monthly Subscription:</p>
+        <p>Enter card details to purchase {planNickname} Subscription:</p>
         <div className="cardelement-container">
           <CardElement />
         </div>
