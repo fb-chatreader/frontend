@@ -13,7 +13,8 @@ class ChoosePlan extends Component {
     };
 
     componentDidMount() {
-        axios.get('api/billing/productsandplans')
+        const facebook_id = 'def456';
+        axios.get(`api/billing/productsandplans/${facebook_id}`)
             .then(response => {
                 console.log(response);
                 this.setState({ products: response.data })
@@ -51,12 +52,16 @@ class ChoosePlan extends Component {
                                                         <span>{plan.interval}</span>
                                                     )}     
                                                 </h3>
-                                                {/* <input className='btn' type='submit' value='Sign Up'/> */}
-                                                <Link exact to={`/checkout/newsub/${plan.nickname}/${plan.id}`}>
+                                                {plan.user_is_subscribed ? (
+                                                    <p>You are subscribed to this plan</p>
+                                                ) : (
+                                                    <Link exact to={`/checkout/newsub/${plan.nickname}/${plan.id}`}>
                                                     <button>
                                                         Select Plan
                                                     </button>
-                                                </Link>
+                                                    </Link>
+                                                )}
+                                                
                                             </form>
                                             </div>
                                         ))}

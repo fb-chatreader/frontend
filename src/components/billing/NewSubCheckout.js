@@ -22,7 +22,7 @@ class NewSubCheckout extends Component {
     const subData = {
       source: token.id,
       planID,
-      facebook_id: 'abc123'   // hard-coded to match test user in database
+      facebook_id: 'def456'   // hard-coded to match test user in database
     };
 
     axios.post('/api/billing/checkout/newsub', subData)
