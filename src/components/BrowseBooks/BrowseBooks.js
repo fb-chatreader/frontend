@@ -46,7 +46,9 @@ function BrowseBooks(props) {
           .sort((a, b) => b.rating_qty - a.rating_qty)
           .map(b => {
             return (
-              <BookCard book={b}/>
+              <div key={b.id}>
+                <BookCard book={b}/>
+              </div>
             );
           })
       ) : (
