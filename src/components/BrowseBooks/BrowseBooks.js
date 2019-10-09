@@ -6,12 +6,13 @@ import { BookContext } from 'Providers/BooksProvider.js';
 function BrowseBooks(props) {
   const [state, dispatch] = useContext(BookContext);
   const [categories, setCategories] = useState([]);
-
+  console.log('categories:', categories);
   const [selected, setSelected] = useState(null);
 
   useEffect(() => {
     if (!state.books || !state.books.length) {
       axios.get('/api/books/').then(res => {
+        console.log('api/books response:', res.data);
         setCategories(
           Array.from(new Set(res.data.map(({ category }) => category))).sort()
         );
@@ -19,7 +20,7 @@ function BrowseBooks(props) {
       });
     }
   }, [state.books, dispatch]);
-
+  
   return (
     <div>
       <ul>
