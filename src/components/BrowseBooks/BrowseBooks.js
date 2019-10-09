@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import axios from 'axios';
 
 import { BookContext } from 'Providers/BooksProvider.js';
+import BookCard from './BookCard';
 
 function BrowseBooks(props) {
   const [state, dispatch] = useContext(BookContext);
@@ -45,20 +46,7 @@ function BrowseBooks(props) {
           .sort((a, b) => b.rating_qty - a.rating_qty)
           .map(b => {
             return (
-              <div key={b.id}>
-                <h2>{b.title}</h2>
-                <h4>By {b.author}</h4>
-                <p>{b.synopsis}</p>
-                <button
-                  onClick={() =>
-                    window.open(
-                      `${process.env.REACT_APP_MESSENGER_URL}?ref=command=start_book,book_id=${b.id}`
-                    )
-                  }
-                >
-                  Read Summary Now!
-                </button>
-              </div>
+              <BookCard book={b}/>
             );
           })
       ) : (
