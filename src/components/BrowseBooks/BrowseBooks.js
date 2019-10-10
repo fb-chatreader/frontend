@@ -2,18 +2,17 @@ import React, { useContext, useEffect, useState } from 'react';
 import axios from 'axios';
 
 import { BookContext } from 'Providers/BooksProvider.js';
-import BookCard from './BookCard';
+import BooksGrid from './BooksGrid';
 
 function BrowseBooks(props) {
   const [state, dispatch] = useContext(BookContext);
   const [categories, setCategories] = useState([]);
-  console.log('categories:', categories);
   const [selected, setSelected] = useState(null);
 
   useEffect(() => {
     if (!state.books || !state.books.length) {
       axios.get('/api/books/').then(res => {
-        console.log('api/books response:', res.data);
+        console.log(res.data);
         setCategories(
           Array.from(new Set(res.data.map(({ category }) => category))).sort()
         );
@@ -41,16 +40,7 @@ function BrowseBooks(props) {
         ))}
       </ul>
       {selected ? (
-        state.books
-          .filter(b => b.category === selected)
-          .sort((a, b) => b.rating_qty - a.rating_qty)
-          .map(b => {
-            return (
-              <div key={b.id}>
-                <BookCard book={b}/>
-              </div>
-            );
-          })
+        <BooksGrid books={state.books} selected={selected}/>
       ) : (
         <p>Please select a genre to continue</p>
       )}
