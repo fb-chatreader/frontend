@@ -25,23 +25,29 @@ function BrowseBooks(props) {
   
   return (
     <div className={styles['browseBooks']}>
-      <h3>Genres</h3>
-      <ul>
-        {categories.map(category => (
-          <li
-            className={styles['filterOption']}
-            key={category}
-            onClick={e => setSelected(category)}
-            style={{
-              backgroundColor:
-                selected === category ? 'rgba(0,0,0,0.1)' : 'initial'
-            }}
-          >
-            {category} (
-            {state.books.filter(b => b.category === category).length})
-          </li>
-        ))}
-      </ul>
+
+      <div className={styles['menusContainer']}>
+        <div className={styles['genreMenu']}>
+          <h3>Genres</h3>
+          <ul>
+            {categories.map(category => (
+              <li
+                className={styles['filterOption']}
+                key={category}
+                onClick={e => setSelected(category)}
+                style={{
+                  backgroundColor:
+                    selected === category ? 'rgba(0,0,0,0.1)' : 'initial'
+                }}
+              >
+                {category} (
+                {state.books.filter(b => b.category === category).length})
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+
       {selected ? (
         <div className={styles['booksGridContainer']}>
           <BooksGrid books={state.books} selected={selected} />
@@ -49,6 +55,7 @@ function BrowseBooks(props) {
       ) : (
         <p>Please select a genre to continue</p>
       )}
+      
     </div>
   );
 }
