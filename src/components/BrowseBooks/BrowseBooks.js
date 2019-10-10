@@ -4,6 +4,8 @@ import axios from 'axios';
 import { BookContext } from 'Providers/BooksProvider.js';
 import BooksGrid from './BooksGrid';
 
+import styles from '../../scss/components/BrowseBooks.module.scss';
+
 function BrowseBooks(props) {
   const [state, dispatch] = useContext(BookContext);
   const [categories, setCategories] = useState([]);
@@ -40,7 +42,9 @@ function BrowseBooks(props) {
         ))}
       </ul>
       {selected ? (
-        <BooksGrid books={state.books} selected={selected}/>
+        <div className={styles['booksGridContainer']}>
+          <BooksGrid books={state.books} selected={selected} />
+        </div>
       ) : (
         <p>Please select a genre to continue</p>
       )}

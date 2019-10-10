@@ -2,10 +2,5 @@
   margin: 5px;
   border: 1px solid lightgrey;
   border-radius: 5px;
-  height: 200px;
-  max-width: 150px; }
-
-.bookImage {
-  width: 100%;
-  height: auto;
-  overflow: hidden; }
+  height: 270px;
+  width: 250px; }
