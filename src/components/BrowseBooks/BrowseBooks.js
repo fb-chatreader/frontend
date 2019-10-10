@@ -2,16 +2,18 @@ import React, { useContext, useEffect, useState } from 'react';
 import axios from 'axios';
 
 import { BookContext } from 'Providers/BooksProvider.js';
+import BookCard from './BookCard';
 
 function BrowseBooks(props) {
   const [state, dispatch] = useContext(BookContext);
   const [categories, setCategories] = useState([]);
-
+  console.log('categories:', categories);
   const [selected, setSelected] = useState(null);
 
   useEffect(() => {
     if (!state.books || !state.books.length) {
       axios.get('/api/books/').then(res => {
+        console.log('api/books response:', res.data);
         setCategories(
           Array.from(new Set(res.data.map(({ category }) => category))).sort()
         );
@@ -19,7 +21,7 @@ function BrowseBooks(props) {
       });
     }
   }, [state.books, dispatch]);
-
+  
   return (
     <div>
       <ul>
@@ -45,18 +47,7 @@ function BrowseBooks(props) {
           .map(b => {
             return (
               <div key={b.id}>
-                <h2>{b.title}</h2>
-                <h4>By {b.author}</h4>
-                <p>{b.synopsis}</p>
-                <button
-                  onClick={() =>
-                    window.open(
-                      `${process.env.REACT_APP_MESSENGER_URL}?ref=command=start_book,book_id=${b.id}`
-                    )
-                  }
-                >
-                  Read Summary Now!
-                </button>
+                <BookCard book={b}/>
               </div>
             );
           })
