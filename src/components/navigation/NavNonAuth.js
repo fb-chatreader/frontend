@@ -1,9 +1,11 @@
 import React from 'react';
 import { withRouter, NavLink } from 'react-router-dom';
 
+import styles from '../../scss/components/NavNonAuth.module.scss';
+
 const NavNonAuth = () => (
   <div className="nav-non-auth-container">
-    <h1 className="logo">FB Chat Reader</h1>
+    <h1 className={styles['appName']}>Chatwise</h1>
     <div className="nav-link-container">
       <NavLink
         exact
