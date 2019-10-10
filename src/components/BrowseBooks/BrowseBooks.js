@@ -40,8 +40,7 @@ function BrowseBooks(props) {
                     selected === category ? 'rgba(0,0,0,0.1)' : 'initial'
                 }}
               >
-                {category} (
-                {state.books.filter(b => b.category === category).length})
+                {category} ({state.books.filter(b => b.category === category).length})
               </li>
             ))}
           </ul>
@@ -55,7 +54,7 @@ function BrowseBooks(props) {
       ) : (
         <p>Please select a genre to continue</p>
       )}
-      
+
     </div>
   );
 }
