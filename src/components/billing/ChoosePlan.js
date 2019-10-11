@@ -31,7 +31,8 @@ class ChoosePlan extends Component {
                 <Elements>
                 <div className='chooseplan-page'>
                     <div className='products-container'>
-                            {products.map((product, index) => (
+                        {products ? (
+                            products.map((product, index) => (
                                 <div className='product-container' key ={index}>
                                     <h2>Product: {product.name}</h2>
                                     <h3>Choose a plan:</h3>
@@ -68,8 +69,10 @@ class ChoosePlan extends Component {
 
                                     </div>
                                 </div>
-                            ))}
-                    
+                            ))
+                        ) : (
+                            <p>No products found. Make sure to sign in with a valid user.</p>
+                        )}
                     </div>
                 </div>
               </Elements>
