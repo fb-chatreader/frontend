@@ -1,0 +1,9 @@
+.booksGrid {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.gridItem {
+	flex: 1 0 30%; /* explanation below */
+}

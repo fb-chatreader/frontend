@@ -1,0 +1,23 @@
+.browseBooks {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.menusContainer {
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+}
+
+.genreMenu {
+	margin: 5px;
+}
+
+.booksGridContainer {
+	max-width: 800px;
+}
+
+.filterOption:hover {
+	cursor: pointer;
+}

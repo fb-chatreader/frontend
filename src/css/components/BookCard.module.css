@@ -1,6 +1,44 @@
 .bookCard {
+  display: flex;
+  flex-direction: column;
   margin: 5px;
   border: 1px solid lightgrey;
   border-radius: 5px;
-  height: 170px;
-  max-width: 23%; }
+  height: 270px;
+  width: 250px; }
+
+.header {
+  position: relative;
+  height: 50%;
+  overflow-y: hidden; }
+
+.bookImage {
+  width: 100%;
+  height: auto; }
+
+.titleText {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  max-width: 90%;
+  font-size: 20px;
+  margin: 0;
+  padding: 5px;
+  text-align: left;
+  overflow-wrap: word-break;
+  background-color: #99ccff; }
+
+.footer {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 10px 5px 10px 5px; }
+
+.authorText {
+  font-size: 18px;
+  margin: 0;
+  padding: 5px;
+  text-align: left;
+  overflow-wrap: word-break; }

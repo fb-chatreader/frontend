@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 const LandingPage = () => {
     return (
         <div className='landingpage-container'>
-            Welcome to the Facebook Chat Reader payment portal
+            Welcome to Chatwise - the best way to find books and read summaries.
         </div>
     )
 }
