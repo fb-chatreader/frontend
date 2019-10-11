@@ -24,15 +24,15 @@ function BrowseBooks(props) {
   }, [state.books, dispatch]);
   
   return (
-    <div className={styles['browseBooks']}>
+    <div className={styles.browseBooks}>
 
-      <div className={styles['menusContainer']}>
-        <div className={styles['genreMenu']}>
+      <div className={styles.menusContainer}>
+        <div className={styles.genreMenu}>
           <h3>Genres</h3>
           <ul>
             {categories.map(category => (
               <li
-                className={styles['filterOption']}
+                className={styles.filterOption}
                 key={category}
                 onClick={e => setSelected(category)}
                 style={{

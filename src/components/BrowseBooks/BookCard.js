@@ -4,13 +4,13 @@ import styles from '../../scss/components/BookCard.module.scss';
 
 function BookCard(props) {
     return (
-        <div className={styles['bookCard']}>
-            <div className={styles['header']}>
-                <img className={styles['bookImage']} src={SampleImage} alt='book-cover' />
-                <h2 className={styles['titleText']}>{props.book.title}</h2>
+        <div className={styles.bookCard}>
+            <div className={styles.header}>
+                <img className={styles.bookImage} src={SampleImage} alt='book-cover' />
+                <h2 className={styles.titleText}>{props.book.title}</h2>
             </div>
-            <div className={styles['footer']}>
-                <h4 className={styles['authorText']}>By {props.book.author}</h4>
+            <div className={styles.footer}>
+                <h4 className={styles.authorText}>By {props.book.author}</h4>
                 <button
                     onClick={() =>
                     window.open(

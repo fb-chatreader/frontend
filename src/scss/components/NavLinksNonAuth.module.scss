@@ -1,0 +1,15 @@
+.navLinksNonAuth {
+	border: 1px solid red;
+	display: flex;
+	align-items: center;
+}
+
+.navLink {
+	text-decoration: none;
+	color: blue;
+	margin: 5px;
+}
+
+.navLink:hover {
+	color: black;
+}
