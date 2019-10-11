@@ -1,7 +1,9 @@
 .navLinksNonAuth {
-	border: 1px solid red;
+	width: 50%;
+	min-width: 250px;
 	display: flex;
 	align-items: center;
+	justify-content: space-around;
 }
 
 .navLink {
