@@ -24,8 +24,7 @@ function App() {
               <Route exact path="/browse">
                 <BrowseBooks />
               </Route>
-              <Route exact path="/checkout/newsub/:planNickname/:planID">
-                <NewSubCheckout />
+              <Route exact path="/checkout/newsub/:planNickname/:planID" component={NewSubCheckout}>
               </Route>
               <Route exact path="/">
                 <LandingPage />

@@ -13,7 +13,7 @@ class ChoosePlan extends Component {
     };
 
     componentDidMount() {
-        const facebook_id = 'def456';
+        const facebook_id = '111468236903301';
         axios.get(`api/billing/productsandplans/${facebook_id}`)
             .then(response => {
                 console.log(response);
