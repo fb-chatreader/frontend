@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import { Elements, StripeProvider } from 'react-stripe-elements';
-import { Link } from 'react-router-dom';
-import SubPlanCard from './SubPlanCard';
+import SubPlansGrid from './SubPlansGrid';
 import axios from 'axios';
 import './css/ChoosePlan.css';
-import { StylesContext } from '../../../node_modules/@material-ui/styles/StylesProvider';
 
 class ChoosePlan extends Component {
   constructor(props) {
@@ -39,18 +37,10 @@ class ChoosePlan extends Component {
               {products ? (
                 products.map((product, index) => (
                   <div className="product-container" key={index}>
-                    <h2>Product: {product.name}</h2>
-                    <h3>Choose a plan:</h3>
+                    <h2>{product.name}</h2>
+                    <h3>Choose a payment plan:</h3>
                     <div className="plans-container">
-                      {product.plans.map((plan, index) => (
-                          <div className="plan-container" key={index}>
-                            <SubPlanCard 
-                                product={product} 
-                                plan={plan} 
-                                id_token={id_token}
-                            />
-                          </div>
-                      ))}
+                      <SubPlansGrid product={product} id_token={id_token} />
                     </div>
                   </div>
                 ))
