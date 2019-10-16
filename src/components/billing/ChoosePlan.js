@@ -28,56 +28,55 @@ class ChoosePlan extends Component {
 
   render() {
     const { products, id_token } = this.state;
-    console.log('MY STATE: ', this.state);
     return (
-      <StripeProvider apiKey="pk_test_szSIHpMw6NMiX62i8aL5W82t00VdTotHmW">
+      <StripeProvider apiKey='pk_test_szSIHpMw6NMiX62i8aL5W82t00VdTotHmW'>
         <Elements>
-          <div className="chooseplan-page">
-            <div className="products-container">
+          <div className='chooseplan-page'>
+            <div className='products-container'>
               {products ? (
                 products.map((product, index) => (
-                  <div className="product-container" key={index}>
+                  <div className='product-container' key={index}>
                     <h2>Product: {product.name}</h2>
                     <h3>Choose a plan:</h3>
-                    <div className="plans-container">
+                    <div className='plans-container'>
                       {product.plans.map((plan, index) => (
-                        <div className="plan-container" key={index}>
-                          <form action="/signUp" method="POST">
+                        <div className='plan-container' key={index}>
+                          <form action='/signUp' method='POST'>
                             <input
                               hidden
                               readOnly
                               value={product.name}
-                              name="productName"
+                              name='productName'
                             />
                             <input
                               hidden
                               readOnly
                               value={plan.id}
-                              name="planId"
+                              name='planId'
                             />
                             <input
                               hidden
                               readOnly
                               value={plan.nickname}
-                              name="planName"
+                              name='planName'
                             />
                             <input
                               hidden
                               readOnly
                               value={plan.amount}
-                              name="planAmount"
+                              name='planAmount'
                             />
                             <input
                               hidden
                               readOnly
                               value={plan.interval}
-                              name="planInterval"
+                              name='planInterval'
                             />
                             <input
                               hidden
                               readOnly
                               value={plan.interval_count}
-                              name="planIntervalCount"
+                              name='planIntervalCount'
                             />
                             <h3>
                               Plan: {plan.nickname} {plan.amount}/
