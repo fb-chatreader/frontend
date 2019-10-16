@@ -13,26 +13,29 @@ class NewSubCheckout extends Component {
   }
 
   async submit(event) {
-    const { token } = await this.props.stripe.createToken({ name: "New Subscription" });
+    const { token } = await this.props.stripe.createToken({
+      name: 'New Subscription'
+    });
     console.log('token:', token);
     console.log('tokenID:', token.id);
-    const { planID } = this.props.match.params;
+    const { planID, id_token } = this.props.match.params;
     console.log('planID: ', planID);
 
     const subData = {
       source: token.id,
       planID,
-      facebook_id: '2501371136553067'   // hard-coded to match seed user in database
+      id_token
     };
 
-    axios.post('/api/billing/checkout/newsub', subData)
+    axios
+      .post('/api/billing/checkout/newsub', subData)
       .then(response => {
         console.log(response);
         this.setState({ complete: true });
       })
       .catch(error => {
         console.log(error.message);
-      })
+      });
   }
 
   render() {
