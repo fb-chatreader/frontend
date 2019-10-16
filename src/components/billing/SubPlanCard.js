@@ -5,43 +5,6 @@ import styles from '../../scss/components/SubPlanCard.module.scss';
 function SubPlanCard(props) {
     return (
         <div className={styles.subPlanCard}>
-            <form action="/signUp" method="POST">
-            <input
-                hidden
-                readOnly
-                value={props.product.name}
-                name="productName"
-            />
-            <input
-                hidden
-                readOnly
-                value={props.plan.id}
-                name="planId"
-            />
-            <input
-                hidden
-                readOnly
-                value={props.plan.nickname}
-                name="planName"
-            />
-            <input
-                hidden
-                readOnly
-                value={props.plan.amount}
-                name="planAmount"
-            />
-            <input
-                hidden
-                readOnly
-                value={props.plan.interval}
-                name="planInterval"
-            />
-            <input
-                hidden
-                readOnly
-                value={props.plan.interval_count}
-                name="planIntervalCount"
-            />
             <h3>
                 Plan: {props.plan.nickname} {props.plan.amount}/
                 {props.plan.interval_count > 1 ? (
@@ -62,7 +25,6 @@ function SubPlanCard(props) {
                 <button>Select Plan</button>
                 </Link>
             )}
-            </form>
         </div>
     )
 }
