@@ -4,7 +4,7 @@ import styles from '../../scss/components/SubPlanCard.module.scss';
 
 function SubPlanCard(props) {
     return (
-        <div className="planCard">
+        <div className={styles.subPlanCard}>
             <form action="/signUp" method="POST">
             <input
                 hidden
