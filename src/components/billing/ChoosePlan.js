@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Elements, StripeProvider } from 'react-stripe-elements';
 import SubPlansGrid from './SubPlansGrid';
 import axios from 'axios';
-import './css/ChoosePlan.css';
+import styles from '../../scss/components/ChoosePlan.module.scss'
 
 class ChoosePlan extends Component {
   constructor(props) {
@@ -32,14 +32,14 @@ class ChoosePlan extends Component {
     return (
       <StripeProvider apiKey="pk_test_szSIHpMw6NMiX62i8aL5W82t00VdTotHmW">
         <Elements>
-          <div className="chooseplan-page">
-            <div className="products-container">
+          <div className={styles.choosePlan}>
+            <div className={styles.productsContainer}>
               {products ? (
                 products.map((product, index) => (
-                  <div className="product-container" key={index}>
+                  <div className={styles.productContainer} key={index}>
                     <h2>{product.name}</h2>
                     <h3>Choose a payment plan:</h3>
-                    <div className="plans-container">
+                    <div className={styles.plansContainer}>
                       <SubPlansGrid product={product} id_token={id_token} />
                     </div>
                   </div>
