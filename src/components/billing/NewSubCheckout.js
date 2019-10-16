@@ -22,13 +22,13 @@ class NewSubCheckout extends Component {
     const subData = {
       source: token.id,
       planID,
-      facebook_id: 'def456'   // hard-coded to match test user in database
+      facebook_id: '2501371136553067'   // hard-coded to match seed user in database
     };
 
     axios.post('/api/billing/checkout/newsub', subData)
       .then(response => {
         console.log(response);
-        this.setState({complete: true});
+        this.setState({ complete: true });
       })
       .catch(error => {
         console.log(error.message);
