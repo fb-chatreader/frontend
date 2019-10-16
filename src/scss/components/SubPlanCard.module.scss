@@ -1,5 +1,22 @@
 .subPlanCard {
+	width: 160px;
+	height: 120px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 	border: 1px solid lightgrey;
 	border-radius: 5px;
-	width: 200px;
+}
+
+.planNameText {
+	margin: 5px;
+}
+
+.planPriceText {
+	margin: 5px;
+}
+
+.selectPlanBtn {
+	margin: 5px;
 }

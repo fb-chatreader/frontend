@@ -5,8 +5,11 @@ import styles from '../../scss/components/SubPlanCard.module.scss';
 function SubPlanCard(props) {
     return (
         <div className={styles.subPlanCard}>
-            <h3>
-                Plan: {props.plan.nickname} {props.plan.amount}/
+            <h3 className={styles.planNameText}>
+                {props.plan.nickname}
+            </h3> 
+            <p className={styles.planPriceText}>
+                {props.plan.amount}/
                 {props.plan.interval_count > 1 ? (
                 <span>
                     {props.plan.interval_count} {props.plan.interval}s
@@ -14,7 +17,7 @@ function SubPlanCard(props) {
                 ) : (
                 <span>{props.plan.interval}</span>
                 )}
-            </h3>
+            </p>
             {props.plan.user_is_subscribed ? (
                 <p>You are subscribed to this plan</p>
             ) : (
@@ -22,7 +25,9 @@ function SubPlanCard(props) {
                 exact
                 to={`/checkout/newsub/${props.id_token}/${props.plan.nickname}/${props.plan.id}`}
                 >
-                <button>Select Plan</button>
+                <button className={styles.selectPlanBtn}>
+                    Select Plan
+                </button>
                 </Link>
             )}
         </div>
