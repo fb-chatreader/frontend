@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Elements, StripeProvider } from 'react-stripe-elements';
-import { Link } from 'react-router-dom';
+import SubPlansGrid from './SubPlansGrid';
 import axios from 'axios';
-import './css/ChoosePlan.css';
+import styles from '../../scss/components/ChoosePlan.module.scss'
 
 class ChoosePlan extends Component {
   constructor(props) {
@@ -32,76 +32,15 @@ class ChoosePlan extends Component {
     return (
       <StripeProvider apiKey="pk_test_szSIHpMw6NMiX62i8aL5W82t00VdTotHmW">
         <Elements>
-          <div className="chooseplan-page">
-            <div className="products-container">
+          <div className={styles.choosePlan}>
+            <div className={styles.productsContainer}>
               {products ? (
                 products.map((product, index) => (
-                  <div className="product-container" key={index}>
-                    <h2>Product: {product.name}</h2>
-                    <h3>Choose a plan:</h3>
-                    <div className="plans-container">
-                      {product.plans.map((plan, index) => (
-                        <div className="plan-container" key={index}>
-                          <form action="/signUp" method="POST">
-                            <input
-                              hidden
-                              readOnly
-                              value={product.name}
-                              name="productName"
-                            />
-                            <input
-                              hidden
-                              readOnly
-                              value={plan.id}
-                              name="planId"
-                            />
-                            <input
-                              hidden
-                              readOnly
-                              value={plan.nickname}
-                              name="planName"
-                            />
-                            <input
-                              hidden
-                              readOnly
-                              value={plan.amount}
-                              name="planAmount"
-                            />
-                            <input
-                              hidden
-                              readOnly
-                              value={plan.interval}
-                              name="planInterval"
-                            />
-                            <input
-                              hidden
-                              readOnly
-                              value={plan.interval_count}
-                              name="planIntervalCount"
-                            />
-                            <h3>
-                              Plan: {plan.nickname} {plan.amount}/
-                              {plan.interval_count > 1 ? (
-                                <span>
-                                  {plan.interval_count} {plan.interval}s
-                                </span>
-                              ) : (
-                                <span>{plan.interval}</span>
-                              )}
-                            </h3>
-                            {plan.user_is_subscribed ? (
-                              <p>You are subscribed to this plan</p>
-                            ) : (
-                              <Link
-                                exact
-                                to={`/checkout/newsub/${id_token}/${plan.nickname}/${plan.id}`}
-                              >
-                                <button>Select Plan</button>
-                              </Link>
-                            )}
-                          </form>
-                        </div>
-                      ))}
+                  <div className={styles.productContainer} key={index}>
+                    <h2>{product.name}</h2>
+                    <h3>Choose a payment plan:</h3>
+                    <div className={styles.plansContainer}>
+                      <SubPlansGrid product={product} id_token={id_token} />
                     </div>
                   </div>
                 ))
