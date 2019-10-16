@@ -18,14 +18,22 @@ function App() {
           <div className="App">
             <NavBar />
             <Switch>
-              <Route exact path="/chooseplan">
-                <ChoosePlan />
-              </Route>
+              <Route
+                exact
+                path="/chooseplan/:id_token"
+                component={ChoosePlan}
+              ></Route>
+
               <Route exact path="/browse">
                 <BrowseBooks />
               </Route>
-              <Route exact path="/checkout/newsub/:planNickname/:planID" component={NewSubCheckout}>
-              </Route>
+
+              <Route
+                exact
+                path="/checkout/newsub/:id_token/:planNickname/:planID"
+                component={NewSubCheckout}
+              ></Route>
+
               <Route exact path="/">
                 <LandingPage />
               </Route>
