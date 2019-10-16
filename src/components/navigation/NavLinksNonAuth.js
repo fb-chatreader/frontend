@@ -13,13 +13,13 @@ const NavLinksNonAuth = () => (
     >
       Home
     </NavLink>
-    <NavLink
+    {/* <NavLink
       to="/chooseplan"
       className={styles.navLink}
       activeStyle={{ color: 'black' }}
     >
       Checkout
-    </NavLink>
+    </NavLink> */}
     <NavLink
       to="/browse"
       className={styles.navLink}
