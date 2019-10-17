@@ -11,19 +11,14 @@ function ShareBook(props) {
   console.log(props);
 
   return (
-    <div
-      className="btnContainer"
-      onClick={() => {
-        console.log('sharing');
-      }}
-    >
-      <FacebookShareButton>
+    <div className="btn-container">
+      <FacebookShareButton className="icon-button" onClick={() => window.open(('erikkimsey.com', '_blank'))}>
         <FacebookIcon size={32} round={true} />
       </FacebookShareButton>
-      <TwitterShareButton _target="blank">
+      <TwitterShareButton className="icon-button" onClick={() => window.open(('erikkimsey.com', '_blank'))}>
         <TwitterIcon size={32} round={true} />
       </TwitterShareButton>
-      <EmailShareButton target="_blank">
+      <EmailShareButton className="icon-button" onClick={() => window.open(('erikkimsey.com', '_blank'))}>
         <EmailIcon size={32} round={true} />
       </EmailShareButton>
     </div>

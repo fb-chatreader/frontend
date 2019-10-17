@@ -1,9 +1,10 @@
-.btnContainer {
+.btn-container {
   display:flex;
   flex-flow: row;
   height: 40px;
   
-  button {
 
+  .icon-button {
+    margin:3px;
   }
 }
