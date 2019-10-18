@@ -4,6 +4,10 @@ import SampleImage from '../../assets/girl-boss-cover.jpg';
 import styles from '../../scss/components/BookCard.module.scss';
 
 function BookCard(props) {
+  console.log('props in card');
+  console.log('props in card');
+  console.log('props in card');
+  console.log(props);
   return (
     <div className={styles.bookCard}>
       <div className={styles.header}>

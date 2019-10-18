@@ -1,5 +1,6 @@
 import React from 'react';
 import { FacebookShareButton, TwitterShareButton, EmailShareButton } from 'react-share';
+import { BooksProvider } from '../../Providers/BooksProvider';
 import { FacebookIcon, TwitterIcon, EmailIcon } from 'react-share';
 
 import '../../scss/components/ShareBook.scss';
@@ -9,16 +10,26 @@ function ShareBook(props) {
   console.log('props in share');
   console.log('props in share');
   console.log(props);
-
+  // console.log(BooksProvider);
+  const shareUrl = `${process.env.REACT_APP_MESSENGER_URL}?ref=command=start_book,book_id=${props.data.book.id}`;
+  // const shareUrl = 'erikkimsey.com';
   return (
     <div className="btn-container">
-      <FacebookShareButton className="icon-button" onClick={() => window.open(('erikkimsey.com', '_blank'))}>
+      <FacebookShareButton
+        url={shareUrl}
+        className="icon-button"
+        onClick={() => window.open(('erikkimsey.com', '_blank'))}
+      >
         <FacebookIcon size={32} round={true} />
       </FacebookShareButton>
-      <TwitterShareButton className="icon-button" onClick={() => window.open(('erikkimsey.com', '_blank'))}>
+      <TwitterShareButton
+        url={shareUrl}
+        className="icon-button"
+        onClick={() => window.open(('erikkimsey.com', '_blank'))}
+      >
         <TwitterIcon size={32} round={true} />
       </TwitterShareButton>
-      <EmailShareButton className="icon-button" onClick={() => window.open(('erikkimsey.com', '_blank'))}>
+      <EmailShareButton url={shareUrl} className="icon-button">
         <EmailIcon size={32} round={true} />
       </EmailShareButton>
     </div>
