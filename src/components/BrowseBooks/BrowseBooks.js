@@ -34,7 +34,7 @@ function BrowseBooks(props) {
 
       <div className={styles.menusContainer}>
         <div className={styles.genreMenu}>
-          <h3>Genres</h3>
+          <h3>Categories</h3>
           <ul>
             {categories.map(category => (
               <li
