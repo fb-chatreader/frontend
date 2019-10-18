@@ -60,6 +60,13 @@
 }
 
 .summaryBtn {
-	margin: 5px;
-	overflow: hidden;
+	margin: 5px 7px 5px 7px;
+	padding: 5px;
+	font-size: 12px;
+	border-radius: 7px;
+	background-color: #bde097;
+}
+
+.summaryBtn:hover {
+	cursor: pointer;
 }
