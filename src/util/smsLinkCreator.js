@@ -17,10 +17,10 @@ export const SMS = (props) => {
     let smsUrl = `sms:;body=${url}`;
     return (
       <a href={smsUrl}>
-        <FontAwesomeIcon icon={faSms} className="fa-2x"  />
+        <FontAwesomeIcon icon={faSms} className="fa-2x" />
       </a>
     );
   } else {
-    return console.log('NADA, NADA, NADA');
+    return <div>Share from your mobile device.</div>;
   }
 };
