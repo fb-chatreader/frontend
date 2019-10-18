@@ -58,7 +58,7 @@ function BrowseBooks(props) {
           <BooksGrid books={state.books} selected={selected} />
         </div>
       ) : (
-        <p>Please select a genre to continue</p>
+        <p>Please select a category to continue</p>
       )}
 
     </div>
