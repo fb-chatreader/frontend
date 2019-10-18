@@ -1,0 +1,13 @@
+.btn-container {
+  display:flex;
+  flex-flow: row;
+  height: 40px;
+  
+
+  .icon-button {
+    margin:3px;
+  }
+  .sms-icon-button {
+    margin:3px;
+  }
+}

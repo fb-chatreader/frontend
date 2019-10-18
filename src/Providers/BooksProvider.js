@@ -6,9 +6,5 @@ export const BookContext = createContext();
 export function BooksProvider(props) {
   const { Provider } = BookContext;
 
-  return (
-    <Provider value={useReducer(reducer, initialState)}>
-      {props.children}
-    </Provider>
-  );
+  return <Provider value={useReducer(reducer, initialState)}>{props.children}</Provider>;
 }
