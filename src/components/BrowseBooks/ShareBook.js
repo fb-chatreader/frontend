@@ -14,14 +14,12 @@ function ShareBook(props) {
       <FacebookShareButton
         url={shareUrl}
         className="icon-button"
-        onClick={() => window.open(('erikkimsey.com', '_blank'))}
       >
         <FacebookIcon size={32} round={true} />
       </FacebookShareButton>
       <TwitterShareButton
         url={shareUrl}
         className="icon-button"
-        onClick={() => window.open(('erikkimsey.com', '_blank'))}
       >
         <TwitterIcon size={32} round={true} />
       </TwitterShareButton>

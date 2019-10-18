@@ -21,6 +21,6 @@ export const SMS = (props) => {
       </a>
     );
   } else {
-    return <div>Share from your mobile device.</div>;
+    return <div />;
   }
 };
