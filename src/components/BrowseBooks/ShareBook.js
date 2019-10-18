@@ -1,6 +1,4 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCoffee, faSms } from '@fortawesome/free-solid-svg-icons';
 
 import { FacebookShareButton, TwitterShareButton, EmailShareButton } from 'react-share';
 import { BooksProvider } from '../../Providers/BooksProvider';
@@ -10,14 +8,15 @@ import { FacebookIcon, TwitterIcon, EmailIcon } from 'react-share';
 import '../../scss/components/ShareBook.scss';
 
 function ShareBook(props) {
-  console.log('props in share');
-  console.log('props in share');
-  console.log('props in share');
-  console.log(props);
+  // console.log('props in share');
+  // console.log('props in share');
+  // console.log('props in share');
+  // console.log(props);
   // console.log(BooksProvider);
   const shareUrl = `${process.env.REACT_APP_MESSENGER_URL}?ref=command=start_book,book_id=${props.data.book.id}`;
   // const shareUrl = 'erikkimsey.com';
-  console.log(SMS(shareUrl));
+  console.log('SMS(shareUrl)');
+  console.log(<SMS data={shareUrl} />);
 
   return (
     <div className="btn-container">
@@ -38,6 +37,9 @@ function ShareBook(props) {
       <EmailShareButton url={shareUrl} className="icon-button">
         <EmailIcon size={32} round={true} />
       </EmailShareButton>
+      <div className="sms-icon-button">
+        <SMS data={shareUrl} />
+      </div>
     </div>
   );
 }
