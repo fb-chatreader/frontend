@@ -53,11 +53,15 @@
   align-items: center; }
 
 .summaryBtn {
-  margin: 5px 7px 5px 7px;
-  padding: 5px;
+  margin: 5px;
+  padding: 5px 7px 5px 7px;
   font-size: 12px;
   border-radius: 7px;
-  background-color: #bde097; }
-
-.summaryBtn:hover {
+  background-color: #bde097;
   cursor: pointer; }
+  .summaryBtn button {
+    padding: 0;
+    border: none;
+    background-color: none;
+    background-color: #bde097;
+    cursor: pointer; }
