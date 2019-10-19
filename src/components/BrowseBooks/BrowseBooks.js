@@ -12,6 +12,7 @@ function BrowseBooks(props) {
   const [selected, setSelected] = useState(null);
 
   useEffect(() => {
+    // console.log('useEffect triggered');
     if (!state.books || !state.books.length) {
       axios.get('/api/books/').then(res => {
         console.log(res.data);
@@ -20,15 +21,20 @@ function BrowseBooks(props) {
         );
         dispatch({ type: 'POPULATE_BOOKS', payload: res.data });
       });
+    } else if (!categories.length) { // check for categories, essentially using useEffect as componentDidMount:
+      setCategories(
+        Array.from(new Set(state.books.map(({ category }) => category))).sort()
+      );
     }
   }, [state.books, dispatch]);
   
+  console.log('BrowseBooks categories:', categories);
   return (
     <div className={styles.browseBooks}>
 
       <div className={styles.menusContainer}>
         <div className={styles.genreMenu}>
-          <h3>Genres</h3>
+          <h3>Categories</h3>
           <ul>
             {categories.map(category => (
               <li
@@ -48,11 +54,11 @@ function BrowseBooks(props) {
       </div>
 
       {selected ? (
-        <div className={styles['booksGridContainer']}>
+        <div className={styles.booksGridContainer}>
           <BooksGrid books={state.books} selected={selected} />
         </div>
       ) : (
-        <p>Please select a genre to continue</p>
+        <p>Please select a category to continue</p>
       )}
 
     </div>
