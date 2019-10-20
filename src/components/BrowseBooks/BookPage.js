@@ -1,7 +1,12 @@
 import React from 'react';
+import { useParams } from 'react-router';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-const BookPage = () => {
+const BookPage = (props) => {
+  console.log('props in BookPage');
+  console.log('props in BookPage');
+  console.log('props in BookPage');
+  console.log(props);
   return (
     <div>
       {/* 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCoffee, faSms } from '@fortawesome/free-solid-svg-icons';
+import { faSms } from '@fortawesome/free-solid-svg-icons';
 import getMobileOperatingSystem from './findDeviceType';
 
 export const SMS = (props) => {

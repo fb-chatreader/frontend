@@ -1,15 +1,17 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import ShareBook from './ShareBook';
 import SampleImage from '../../assets/girl-boss-cover.jpg';
+import BookPage from './BookPage';
 import styles from '../../scss/components/BookCard.module.scss';
 
 function BookCard(props) {
   return (
     <div className={styles.bookCard}>
-      <div className={styles.header}>
+      <Link to={`/browse/book/${props.book.id}`} className={styles.header}>
         <img className={styles.bookImage} src={SampleImage} alt="book-cover" />
         <h2 className={styles.titleText}>{props.book.title}</h2>
-      </div>
+      </Link>
       <div className={styles.footer}>
         <h4 className={styles.authorText}>By {props.book.author}</h4>
         <button
