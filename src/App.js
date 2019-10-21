@@ -6,7 +6,7 @@ import NavBar from './components/navigation/NavBar';
 import LandingPage from './components/LandingPage';
 import ChoosePlan from './components/billing/ChoosePlan';
 import NewSubCheckout from './components/billing/NewSubCheckout';
-import BrowseBooks from 'components/BrowseBooks/';
+import BrowseBooks from './components/BrowseBooks/BrowseBooks';
 
 import './App.css';
 
@@ -18,21 +18,13 @@ function App() {
           <div className="App">
             <NavBar />
             <Switch>
-              <Route
-                exact
-                path="/chooseplan/:id_token"
-                component={ChoosePlan}
-              ></Route>
+              <Route exact path="/chooseplan/:id_token" component={ChoosePlan} />
 
               <Route exact path="/browse">
                 <BrowseBooks />
               </Route>
 
-              <Route
-                exact
-                path="/checkout/newsub/:id_token/:planNickname/:planID"
-                component={NewSubCheckout}
-              ></Route>
+              <Route exact path="/checkout/newsub/:id_token/:planNickname/:planID" component={NewSubCheckout} />
 
               <Route exact path="/">
                 <LandingPage />

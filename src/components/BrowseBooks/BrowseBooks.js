@@ -2,15 +2,13 @@ import React, { useContext, useEffect, useState } from 'react';
 import { Route } from 'react-router-dom';
 import axios from 'axios';
 import { BookContext } from 'Providers/BooksProvider.js';
-import BooksGrid from './BooksGrid';
-import BookPage from './BookPage';
 
+import BrowseCategories from './BrowseCategories';
 import styles from '../../scss/components/BrowseBooks.module.scss';
 
 function BrowseBooks(props) {
   const [ state, dispatch ] = useContext(BookContext);
   const [ categories, setCategories ] = useState([]);
-  const [ selected, setSelected ] = useState(null);
 
   useEffect(
     () => {
@@ -26,34 +24,11 @@ function BrowseBooks(props) {
 
   return (
     <div className={styles.browseBooks}>
-      <div className={styles.menusContainer}>
-        <div className={styles.genreMenu}>
-          <h3>Genres</h3>
-          <ul>
-            {categories.map((category) => (
-              <li
-                className={styles.filterOption}
-                key={category}
-                onClick={(e) => setSelected(category)}
-                style={{
-                  backgroundColor: selected === category ? 'rgba(0,0,0,0.1)' : 'initial'
-                }}
-              >
-                {category} ({state.books.filter((b) => b.category === category).length})
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
-
-      {selected ? (
-        <div className={styles['booksGridContainer']}>
-          <BooksGrid books={state.books} selected={selected} />
-        </div>
-      ) : (
-        <p>Please select a genre to continue</p>
-      )}
-      <Route path="/browse/book/:id" render={(props) => <BookPage data={props.book} {...props} />} />
+      WHAT?
+      <BrowseCategories data={state} categories={categories} />
+      {/* <Route path="/browse/book/:id">
+        <BookPage />
+      </Route> */}
     </div>
   );
 }

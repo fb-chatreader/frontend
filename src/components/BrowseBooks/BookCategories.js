@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState, useParams } from 'react';
 import { Route, Link } from 'react-router-dom';
 import axios from 'axios';
 import { BookContext } from 'Providers/BooksProvider.js';
@@ -7,7 +7,10 @@ import BookPage from './BookPage';
 import styles from '../../scss/components/BrowseBooks.module.scss';
 
 const BookCategories = (props) => {
-  const { categories, setSelected, selected, books } = props;
+  console.log(props);
+  const { books, categories, selected, setSelected } = props;
+
+  // const { categories, setCategories } = useState([]);
 
   return (
     <div className={styles.menusContainer}>
@@ -15,8 +18,7 @@ const BookCategories = (props) => {
         <h3>Genres</h3>
         <ul>
           {categories.map((category) => (
-            <Link
-              to="/browse/bookgrid"
+            <div
               className={styles.filterOption}
               key={category}
               onClick={(e) => setSelected(category)}
@@ -25,7 +27,7 @@ const BookCategories = (props) => {
               }}
             >
               {category} ({books.filter((b) => b.category === category).length})
-            </Link>
+            </div>
           ))}
         </ul>
       </div>

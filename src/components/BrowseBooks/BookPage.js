@@ -5,15 +5,14 @@ import BookGrid from './BooksGrid';
 import SingleBook from './SingleBook';
 
 const BookPage = (props) => {
-  console.log('props in BookPage');
-  console.log('props in BookPage');
-  console.log('props in BookPage');
-  console.log(props);
+  // console.log('props in BookPage');
+  // console.log('props in BookPage');
+  // console.log('props in BookPage');
+  // console.log(props);
   return (
     <div>
-      BOOK PAGES
-      <BookGrid />
-      <Route path={`/browse/bookpage/${props.book.id}`}>
+      BOOK PAGE
+      <Route path="/browse/bookpage/:bookId">
         <SingleBook />
       </Route>
     </div>
