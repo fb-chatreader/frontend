@@ -4,7 +4,7 @@ import axios from 'axios';
 import { BookContext } from 'Providers/BooksProvider.js';
 import BooksGrid from './BooksGrid';
 import BookPage from './BookPage';
-import styles from '../../scss/components/BrowseBooks.module.scss';
+import styles from '../../scss/components/CategoryMenu.module.scss';
 
 const BookCategories = (props) => {
   console.log(props);
@@ -13,7 +13,7 @@ const BookCategories = (props) => {
   // const { categories, setCategories } = useState([]);
 
   return (
-    <div className={styles.menusContainer}>
+    <div className={styles.menuContainer}>
       <div className={styles.genreMenu}>
         <h3>Genres</h3>
         <ul>

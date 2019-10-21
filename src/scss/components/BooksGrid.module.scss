@@ -1,7 +1,11 @@
 .booksGrid {
-	width: 100%;
+  position: relative;
+  max-width: 800px;
 	display: flex;
-	flex-wrap: wrap;
+  flex-wrap: wrap;
+  background-color: aqua;
+  left:300px;
+  top:100px
 }
 
 .gridItem {
