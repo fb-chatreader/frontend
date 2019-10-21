@@ -11,8 +11,9 @@ const BookPage = (props) => {
   console.log(props);
   return (
     <div>
+      BOOK PAGES
       <BookGrid />
-      <Route>
+      <Route path={`/browse/bookpage/${props.book.id}`}>
         <SingleBook />
       </Route>
     </div>
