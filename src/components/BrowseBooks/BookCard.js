@@ -8,7 +8,7 @@ import styles from '../../scss/components/BookCard.module.scss';
 function BookCard(props) {
   return (
     <div className={styles.bookCard}>
-      <Link to={`/browse/book/${props.book.id}`} className={styles.header}>
+      <Link to={`/browse/bookpage/${props.book.id}`} className={styles.header}>
         <img className={styles.bookImage} src={SampleImage} alt="book-cover" />
         <h2 className={styles.titleText}>{props.book.title}</h2>
       </Link>
