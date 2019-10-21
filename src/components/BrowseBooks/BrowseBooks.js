@@ -24,7 +24,7 @@ function BrowseBooks(props) {
 
   return (
     <div className={styles.browseBooks}>
-      <BrowseCategories data={state} categories={categories} />
+      {categories && <BrowseCategories data={state} categories={categories} />}
       {/* <Route path="/browse/book/:id">
         <BookPage />
       </Route> */}
