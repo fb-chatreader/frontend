@@ -7,6 +7,7 @@ import LandingPage from './components/LandingPage';
 import ChoosePlan from './components/billing/ChoosePlan';
 import NewSubCheckout from './components/billing/NewSubCheckout';
 import BrowseBooks from './components/BrowseBooks/BrowseBooks';
+import BookPage from './components/BrowseBooks/BookPage';
 
 import './App.css';
 
@@ -22,6 +23,9 @@ function App() {
 
               <Route exact path="/browse">
                 <BrowseBooks />
+              </Route>
+              <Route path="/summary/:id">
+                <BookPage />
               </Route>
 
               <Route exact path="/checkout/newsub/:id_token/:planNickname/:planID" component={NewSubCheckout} />

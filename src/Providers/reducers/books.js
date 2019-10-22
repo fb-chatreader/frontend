@@ -1,6 +1,7 @@
 export const initialState = {
   books: [],
-  categories: []
+  categories: [],
+  selectedBook:null
 };
 
 export function reducer(state, action) {
@@ -9,6 +10,8 @@ export function reducer(state, action) {
       return { ...state, books: action.payload };
     case 'POPULATE_CATEGORIES':
       return { ...state, categories: action.payload };
+      case 'SELECTED_BOOK':
+        return { ...state, categories: action.payload };
     default:
       return state;
   }
