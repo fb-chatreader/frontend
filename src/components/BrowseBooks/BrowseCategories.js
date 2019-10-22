@@ -5,10 +5,18 @@ import BookGrid from './BooksGrid';
 import styles from '../../scss/components/BrowseCats.module.scss';
 
 const BrowseCategories = (props) => {
-  console.log(props);
-  const { categories } = props;
-  const { books } = props.data;
+  // console.log('props');
+  // console.log(props);
+  const [ state, dispatch ] = useContext(BookContext);
+  // console.log('state');
+  // console.log('state');
+  // console.log('state');
+  // console.log(state);
+
+  // const { categories } = props;
+  const { books, categories } = props;
   const [ selected, setSelected ] = useState(null);
+
   return (
     <div className={styles.browseCatsContainer}>
       <BookCategories books={books} categories={categories} selected={selected} setSelected={setSelected} />

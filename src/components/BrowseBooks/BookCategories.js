@@ -1,16 +1,19 @@
 import React, { useContext, useEffect, useState, useParams } from 'react';
 import { Route, Link } from 'react-router-dom';
-import axios from 'axios';
 import { BookContext } from 'Providers/BooksProvider.js';
-import BooksGrid from './BooksGrid';
-import BookPage from './BookPage';
 import styles from '../../scss/components/CategoryMenu.module.scss';
 
 const BookCategories = (props) => {
   console.log(props);
   const { books, categories, selected, setSelected } = props;
+  const [ state, dispatch ] = useContext(BookContext);
 
   // const { categories, setCategories } = useState([]);
+
+  // console.log('state');
+  // console.log('state');
+  // console.log('state');
+  // console.log(state);
 
   return (
     <div className={styles.menuContainer}>
