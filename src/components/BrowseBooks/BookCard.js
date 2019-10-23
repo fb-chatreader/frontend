@@ -1,8 +1,7 @@
-import React, { useContext } from 'react';
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import ShareBook from './ShareBook';
 import SampleImage from '../../assets/girl-boss-cover.jpg';
-
 import styles from '../../scss/components/BookCard.module.scss';
 
 function BookCard(props) {
