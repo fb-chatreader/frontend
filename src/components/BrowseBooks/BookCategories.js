@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { BookContext } from 'Providers/BooksProvider.js';
 import styles from '../../scss/components/CategoryMenu.module.scss';
 
-const BookCategories = (props) => {
+const CategoryMenu = (props) => {
   const { books, categories, selected, setSelected } = props;
   const [ state, dispatch ] = useContext(BookContext);
 
@@ -35,4 +35,4 @@ const BookCategories = (props) => {
   );
 };
 
-export default BookCategories;
+export default CategoryMenu;

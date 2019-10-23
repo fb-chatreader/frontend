@@ -1,15 +1,35 @@
+// .browseCatsContainer {
+// 	position: relative;
+// 	width: 100%;
+// 	display: flex;
+// 	flex-flow: row;
+// 	.gridContainer {
+// 		// width:700px;
+// 	}
+// 	.placeholder {
+// 		position: relative;
+// 		width: 700px;
+// 		top: 100px;
+// 		left: 300px;
+// 	}
+// }
+
 .browseCatsContainer {
-	position: relative;
 	width: 100%;
 	display: flex;
-	flex-flow: row;
+	flex-direction: column;
 	.gridContainer {
 		// width:700px;
 	}
 	.placeholder {
-		position: relative;
 		width: 700px;
 		top: 100px;
 		left: 300px;
+	}
+}
+
+@media (max-width: 1300px) {
+	.browseCatsContainer {
+		flex-direction: column;
 	}
 }

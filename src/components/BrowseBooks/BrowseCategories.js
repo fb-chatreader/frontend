@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import BookCategories from './BookCategories';
+import CategoryMenu from './BookCategories';
 import BooksGrid from './BooksGrid';
 import styles from '../../scss/components/BrowseCats.module.scss';
 
@@ -9,7 +9,7 @@ const BrowseCategories = (props) => {
 
   return (
     <div className={styles.browseCatsContainer}>
-      <BookCategories books={books} categories={categories} selected={selected} setSelected={setSelected} />
+      <CategoryMenu books={books} categories={categories} selected={selected} setSelected={setSelected} />
       {selected ? (
         <div className={styles.gridContainer}>
           <BooksGrid books={books} selected={selected} />

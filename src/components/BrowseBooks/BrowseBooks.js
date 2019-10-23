@@ -26,11 +26,11 @@ function BrowseBooks() {
   );
   
   return (
-    <div className={styles.browseBooks}>
-      <Route exact path="/browse">
+    <Route exact path="/browse">
+      <div className={styles.browseBooks}>
         {state.categories && <BrowseCategories categories={state.categories} books={state.books} />}
-      </Route>
-    </div>
+      </div>
+    </Route>
   );
 }
 
