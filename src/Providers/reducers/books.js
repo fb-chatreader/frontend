@@ -1,7 +1,8 @@
 export const initialState = {
   books: [],
   categories: [],
-  selectedBook:null
+  selectedBook:null,
+  selectedCategory:null
 };
 
 export function reducer(state, action) {
@@ -12,6 +13,8 @@ export function reducer(state, action) {
       return { ...state, categories: action.payload };
       case 'SELECTED_BOOK':
         return { ...state, categories: action.payload };
+      case 'SELECTED_CATEGORY':
+        return { ...state, selectedCategory: action.payload };
     default:
       return state;
   }

@@ -16,7 +16,13 @@ const BookCategories = (props) => {
             <div
               className={styles.filterOption}
               key={category}
-              onClick={(e) => setSelected(category)}
+              onClick={(e) => {
+                dispatch({
+                  type: 'SELECTED_CATEGORY',
+                  payload: category
+                });
+                return setSelected(category);
+              }}
               style={{
                 backgroundColor: selected === category ? 'rgba(0,0,0,0.1)' : 'initial'
               }}
