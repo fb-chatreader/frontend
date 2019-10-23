@@ -1,14 +1,12 @@
 import React, { useContext } from 'react';
-// import { useParams } from 'react-router';
 import { useParams } from 'react-router-dom';
-// import BookGrid from './BooksGrid';
 import SingleBook from './SingleBook';
 import TitlesMenu from './TitlesMenu';
 import { BookContext } from 'Providers/BooksProvider.js';
 import styles from '../../scss/components/BookPage.module.scss';
-const BookPage = (props) => {
+const BookPage = () => {
   const { id } = useParams();
-  const [ state, dispatch ] = useContext(BookContext);
+  const [ state ] = useContext(BookContext);
   const _id = parseInt(id);
   const books = [ ...state.books ];
   const book = books.find((e, i) => {

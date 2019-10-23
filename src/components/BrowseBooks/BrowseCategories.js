@@ -1,5 +1,4 @@
-import React, { useContext, useEffect, useState, useParams } from 'react';
-import { BookContext } from 'Providers/BooksProvider.js';
+import React, { useState } from 'react';
 import BookCategories from './BookCategories';
 import BookGrid from './BooksGrid';
 import styles from '../../scss/components/BrowseCats.module.scss';

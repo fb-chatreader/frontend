@@ -1,5 +1,4 @@
-import React, { useContext, useEffect, useState, useParams } from 'react';
-import { Route, Link } from 'react-router-dom';
+import React, { useContext } from 'react';
 import { BookContext } from 'Providers/BooksProvider.js';
 import styles from '../../scss/components/CategoryMenu.module.scss';
 

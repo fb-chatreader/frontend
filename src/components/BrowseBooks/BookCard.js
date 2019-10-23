@@ -2,12 +2,10 @@ import React, { useContext } from 'react';
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import ShareBook from './ShareBook';
 import SampleImage from '../../assets/girl-boss-cover.jpg';
-import BookPage from './BookPage';
-import { BookContext } from 'Providers/BooksProvider.js';
+
 import styles from '../../scss/components/BookCard.module.scss';
 
 function BookCard(props) {
-  const [ state, dispatch ] = useContext(BookContext);
   return (
     <div className={styles.bookCard}>
       <Link to={`/summary/${props.book.id}`} className={styles.header}>
