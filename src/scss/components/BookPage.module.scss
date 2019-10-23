@@ -1,5 +1,7 @@
 .bookPageContainer {
   position: relative;
+  display: flex;
+  flex-flow: row;
   margin: 0 auto;
   height: 600px;
   width:1000px;
@@ -8,7 +10,9 @@
 }
 
 .singleBookContainer {
-
+  display: flex;
+  flex-flow: column;
+  width:800px;
   top:200px;
   font-size: 44;
   background-color: bisque;
@@ -16,7 +20,6 @@
 }
 
 .titlesMenuContainer {
-  // position: relative;
   width:300px;
   height:600px;
   display: flex;
