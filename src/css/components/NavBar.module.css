@@ -1,0 +1,12 @@
+.navbar {
+  width: 100%;
+  padding: 15px;
+  border-bottom: 1.5px solid lightgrey;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1100;
+  background-color: aliceblue; }
+
+.appName {
+  margin: 0; }

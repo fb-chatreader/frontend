@@ -9,8 +9,7 @@ import NewSubCheckout from './components/billing/NewSubCheckout';
 import BrowseBooks from './components/BrowseBooks/BrowseBooks';
 import BookPage from './components/BrowseBooks/BookPage';
 
-import styles from '../../scss/components/App.module.scss';
-
+import styles from './scss/components/App.module.scss';
 
 function App() {
   return (
