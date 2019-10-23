@@ -8,7 +8,6 @@ const CategoryMenu = (props) => {
 
   return (
     <div className={styles.menuContainer}>
-      <div className={styles.genreMenu}>
         <h3>Categories</h3>
         <ul>
           {categories.map((category) => (
@@ -30,7 +29,6 @@ const CategoryMenu = (props) => {
             </div>
           ))}
         </ul>
-      </div>
     </div>
   );
 };
