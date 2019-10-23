@@ -1,0 +1,31 @@
+.bookPageContainer {
+  position: relative;
+  display: flex;
+  flex-flow: row;
+  margin: 0 auto;
+  height: 600px;
+  width:1000px;
+  background-color: aquamarine;
+  top:100px;
+}
+
+.singleBookContainer {
+  display: flex;
+  flex-flow: column;
+  width:800px;
+  top:200px;
+  font-size: 44;
+  background-color: bisque;
+  color:purple;
+}
+
+.titlesMenuContainer {
+  width:300px;
+  height:600px;
+  display: flex;
+  flex-flow: column;
+  left:0;
+  top:300px;
+  background-color: violet;
+  overflow-y: scroll;
+}
