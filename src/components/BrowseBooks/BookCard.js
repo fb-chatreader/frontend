@@ -13,13 +13,17 @@ function BookCard(props) {
       </Link>
       <div className={styles.footer}>
         <h4 className={styles.authorText}>By {props.book.author}</h4>
-        <button
-          onClick={() =>
-            window.open(`${process.env.REACT_APP_MESSENGER_URL}?ref=command=start_book,book_id=${props.book.id}`)}
-        >
-          Read Summary Now!
-        </button>
-        <ShareBook data={props} />
+        <div className={styles.cardActions}>
+          <div className={styles.summaryBtn}>
+            <button
+              onClick={() =>
+                window.open(`${process.env.REACT_APP_MESSENGER_URL}?ref=command=start_book,book_id=${props.book.id}`)}
+            >
+              Read Summary!
+            </button>
+          </div>
+          <ShareBook data={props} />
+        </div>
       </div>
     </div>
   );
