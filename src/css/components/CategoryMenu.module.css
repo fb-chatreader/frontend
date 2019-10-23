@@ -1,5 +1,5 @@
 .menuContainer {
-  max-width: 300px;
-  width: 100%;
+  width: 275px;
+  padding: 10px;
   display: flex;
   flex-flow: column; }
