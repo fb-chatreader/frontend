@@ -1,15 +1,15 @@
 .booksGrid {
-  position: relative;
-  max-width: 800px;
-  width:100%;
+	// position: relative;
+	max-width: 800px;
+	width: 100%;
 	display: flex;
-  flex-wrap: wrap;
-  background-color: aqua;
-  left:300px;
-  top:100px;
-  margin: 0 20%;
+	flex-wrap: wrap;
+	border: 1px solid aqua;
+	// left: 300px;
+	// top: 100px;
+	// margin: 0 20%;
 }
 
 .gridItem {
-  flex: 1 0 30%;
+	flex: 1 0 30%;
 }

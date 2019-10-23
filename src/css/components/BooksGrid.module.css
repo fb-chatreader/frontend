@@ -1,7 +1,9 @@
 .booksGrid {
+  max-width: 800px;
   width: 100%;
   display: flex;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  border: 1px solid aqua; }
 
 .gridItem {
   flex: 1 0 30%; }
