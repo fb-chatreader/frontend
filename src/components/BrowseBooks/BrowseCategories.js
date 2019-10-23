@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import CategoryMenu from './BookCategories';
+import CategoryMenu from './CategoryMenu';
 import BooksGrid from './BooksGrid';
 import styles from '../../scss/components/BrowseCats.module.scss';
 
