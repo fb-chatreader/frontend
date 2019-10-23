@@ -9,7 +9,7 @@ const BookCategories = (props) => {
   return (
     <div className={styles.menuContainer}>
       <div className={styles.genreMenu}>
-        <h3>Genres</h3>
+        <h3>Categories</h3>
         <ul>
           {categories.map((category) => (
             <div

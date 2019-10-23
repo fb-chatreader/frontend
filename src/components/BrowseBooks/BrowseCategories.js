@@ -15,7 +15,7 @@ const BrowseCategories = (props) => {
           <BookGrid books={books} selected={selected} />
         </div>
       ) : (
-        <p className={styles.placeholder}>Please select a genre to continue</p>
+        <p className={styles.placeholder}>Please select a category to continue</p>
       )}
     </div>
   );
