@@ -1,11 +1,14 @@
 import React, { useContext } from 'react';
-import { useParams } from 'react-router';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import BookGrid from './BooksGrid';
+import { useParams } from 'react-router-dom';
+// import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+// import BookGrid from './BooksGrid';
 import SingleBook from './SingleBook';
-import { BookContext } from 'Providers/BooksProvider.js';
+// import { BookContext } from 'Providers/BooksProvider.js';
 
-const BookPage = (props) => {
+const BookPage = props => {
+  const { id } = useParams();
+
+  console.log(id);
   /**
    * Component: Book title list
    * Component: Individual book summary
