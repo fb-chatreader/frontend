@@ -1,0 +1,10 @@
+.browseCatsContainer {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-flow: row; }
+  .browseCatsContainer .placeholder {
+    position: relative;
+    width: 700px;
+    top: 100px;
+    left: 300px; }

@@ -1,15 +1,15 @@
 .browseCatsContainer {
-  position: relative;
-  width: 100%;
-  display: flex;
-  flex-flow: row;
-    .gridContainer {
-      // width:700px;
-    }
-    .placeholder{
-      position: relative;
-      width:700px;
-      top:100px;
-      left:300px;
-    }
+	position: relative;
+	width: 100%;
+	display: flex;
+	flex-flow: row;
+	.gridContainer {
+		// width:700px;
+	}
+	.placeholder {
+		position: relative;
+		width: 700px;
+		top: 100px;
+		left: 300px;
+	}
 }
