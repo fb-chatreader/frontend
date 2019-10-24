@@ -9,14 +9,14 @@ import NewSubCheckout from './components/billing/NewSubCheckout';
 import BrowseBooks from './components/BrowseBooks/BrowseBooks';
 import BookPage from './components/BrowseBooks/BookPage';
 
-import './App.css';
+import styles from './scss/components/App.module.scss';
 
 function App() {
   return (
     <Router>
       <StripeProvider apiKey="pk_test_szSIHpMw6NMiX62i8aL5W82t00VdTotHmW">
         <Elements>
-          <div className="App">
+          <div className={styles.App}>
             <NavBar />
             <Switch>
               <Route exact path="/chooseplan/:id_token" component={ChoosePlan} />

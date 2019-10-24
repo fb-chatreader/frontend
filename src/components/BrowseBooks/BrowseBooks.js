@@ -8,13 +8,12 @@ import styles from '../../scss/components/BrowseBooks.module.scss';
 
 function BrowseBooks() {
   const [ state, dispatch ] = useContext(BookContext);
-  const [ categories, setCategories ] = useState([]);
 
   useEffect(
     () => {
       if (!state.books || !state.books.length) {
         axios.get('/api/books/').then((res) => {
-          setCategories(Array.from(new Set(res.data.map(({ category }) => category))).sort());
+          const categories = Array.from(new Set(res.data.map(({ category }) => category))).sort();
           dispatch({ type: 'POPULATE_BOOKS', payload: res.data });
           dispatch({
             type: 'POPULATE_CATEGORIES',
@@ -23,15 +22,15 @@ function BrowseBooks() {
         });
       }
     },
-    [ state.books, categories, dispatch ]
+    [ state.books, state.categories, dispatch ]
   );
-
+  
   return (
-    <div className={styles.browseBooks}>
-      <Route exact path="/browse">
-        {categories && <BrowseCategories categories={categories} books={state.books} />}
-      </Route>
-    </div>
+    <Route exact path="/browse">
+      <div className={styles.browseBooks}>
+        {state.categories && <BrowseCategories categories={state.categories} books={state.books} />}
+      </div>
+    </Route>
   );
 }
 
