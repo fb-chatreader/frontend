@@ -14,12 +14,18 @@ const BookPage = () => {
       return books[i];
     }
   });
+  
+  // console.log('BookPage state: ', state);
 
   return (
-    <div className={styles.bookPageContainer}>
-      <TitlesMenu data={state} />
-      <SingleBook book={book} />
-    </div>
+    books.length ? (
+      <div className={styles.bookPageContainer}>
+        <TitlesMenu data={state} />
+        <SingleBook book={book} />
+      </div>
+    ) : (
+      <p>Loading BookPage...</p>
+    )
   );
 };
 
