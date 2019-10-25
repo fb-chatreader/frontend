@@ -2,7 +2,21 @@
 
 .landingPageContainer{
   position: relative;
+  display: flex;
+  flex-direction: row;
   max-width: 1000px;
   width:100%;
   margin:0 auto;
+  // background-color: aqua;
+}
+
+.welcomeHeader {
+  padding:0 15px;
+  margin:0;
+  width:400px;
+  height:400px;
+  background-color: $purpleStuff;
+  color:#fff;
+  font-weight: 800;
+  font-size: 80px;
 }

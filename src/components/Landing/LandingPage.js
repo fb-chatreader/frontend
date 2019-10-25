@@ -4,7 +4,8 @@ import styles from './landing.module.scss';
 const LandingPage = () => {
   return (
     <div className={styles.landingPageContainer}>
-      Welcome to Chatwise - the best way to find books and read summaries.
+      <h1 className={styles.welcomeHeader}>Welcome to Chatwise</h1>
+      <div>the best way to find books and read summaries.</div>
     </div>
   );
 };
