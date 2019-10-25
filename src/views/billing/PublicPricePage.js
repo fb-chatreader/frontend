@@ -18,7 +18,7 @@ class PublicPricePage extends Component {
       .get(`api/billing/publicprices`)
       .then(response => {
         console.log(response);
-        this.setState({ products: response.data, id_token });
+        this.setState({ products: response.data });
       })
       .catch(error => {
         console.log(error);
