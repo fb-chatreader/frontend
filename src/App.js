@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Elements, StripeProvider } from 'react-stripe-elements';
 
 import NavBar from './components/navigation/NavBar';
-import LandingPage from './components/LandingPage';
+import LandingPage from './components/Landing/LandingPage';
 import ChoosePlan from './components/billing/ChoosePlan';
 import NewSubCheckout from './components/billing/NewSubCheckout';
 import BrowseBooks from './components/BrowseBooks/BrowseBooks';
@@ -33,7 +33,6 @@ function App() {
     [ state.books, state.categories, dispatch ]
   );
 
-  
   return (
     <Router>
       <StripeProvider apiKey="pk_test_szSIHpMw6NMiX62i8aL5W82t00VdTotHmW">

@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouter } from "react-router-dom";
+import { withRouter } from 'react-router-dom';
 import NavLinksNonAuth from './NavLinksNonAuth';
 import styles from '../../scss/components/NavBar.module.scss';
 
@@ -8,11 +8,13 @@ import styles from '../../scss/components/NavBar.module.scss';
 // and pass props to NavBar including an isAuthenticated prop to determine with NavBar type to render:
 
 const NavBar = () => (
-    <div className={styles.navbar}>
-        <h1 className={styles.appName}>Chatwise</h1>
-        <NavLinksNonAuth />
+  <div className={styles.navbar}>
+    <div className={styles.navBarContents}>
+    <h1 className={styles.appName}>Chatwise</h1>
+    <NavLinksNonAuth />
     </div>
-    // <div>{props.authUser ? <NavAuth /> : <NavNonAuth />}</div>
+  </div>
+  // <div>{props.authUser ? <NavAuth /> : <NavNonAuth />}</div>
 );
 
 export default withRouter(NavBar);
