@@ -38,7 +38,7 @@ class PublicPricePage extends Component {
                   return (
                     <div className={styles.productContainer} key={index}>
                       <h2>{product.name}</h2>
-                      <h3>Choose a payment plan:</h3>
+                      <h3>Get premium access with these payment plans:</h3>
                       <div className={styles.plansContainer}>
                         <SubPlansGrid product={product} id_token={id_token} />
                       </div>
