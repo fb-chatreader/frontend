@@ -1,21 +1,23 @@
-@import '../colors.scss';
+@import '../main.scss';
 .navLinksNonAuth {
 	width: 50%;
 	min-width: 250px;
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
-  color: #fff;
+  color: $purpleStuff;
+  font-weight: 800;
+  font-size: 18px;
 }
 
 .navLink {
-	text-decoration: none;
-	color: #fff;
+  text-decoration: none;
+  color: $inActiveLinkGray;
 	margin: 5px;
 }
 
 .navLink:hover {
-  transition: all 0.5s ease;
-  color: $hoverLinkOrange;
-  font-weight: 500;
+  transition: all 0.3s ease;
+  color: $purpleStuff;
+  font-weight: 900;
 }

@@ -5,7 +5,7 @@ import styles from '../../scss/components/NavLinksNonAuth.module.scss';
 
 const NavLinksNonAuth = () => (
   <div className={styles.navLinksNonAuth}>
-    <NavLink exact to="/" className={styles.navLink} activeStyle={{ color: '#333' }}>
+    <NavLink exact to="/" className={styles.navLink} activeStyle={{ color: '#ddd' }}>
       Home
     </NavLink>
     {/* <NavLink
@@ -15,7 +15,7 @@ const NavLinksNonAuth = () => (
     >
       Checkout
     </NavLink> */}
-    <NavLink to="/browse" className={styles.navLink} activeStyle={{ color: '#333' }}>
+    <NavLink to="/browse" className={styles.navLink} activeStyle={{ color: '#ddd' }}>
       Browse Books
     </NavLink>
   </div>
