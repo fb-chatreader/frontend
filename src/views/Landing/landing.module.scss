@@ -1,34 +1,32 @@
-@import '../../scss/main.scss';
+@import '../../styles/scss/main.scss';
 
-.landingPageContainer{
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  max-width: 1000px;
-  width:100%;
-  margin:0 auto;
-  
+.landingPageContainer {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	max-width: 1000px;
+	width: 100%;
+	margin: 0 auto;
 }
 
 .welcomeHeader {
-  padding:20px 15px 0 15px;
-  margin:0;
-  width:600px;
-  height:277px;
-  background-color: $purpleStuff;
-  @include background-pattern;
-  color:$purpleStuff;
-  font-weight: 800;
-  font-size: 80px;
-  line-height: 0.6;
-  @include phone-portrait {
-    max-width: 100%;
-  }
+	padding: 20px 15px 0 15px;
+	margin: 0;
+	width: 600px;
+	height: 277px;
+	background-color: $purpleStuff;
+	@include background-pattern;
+	color: $purpleStuff;
+	font-weight: 800;
+	font-size: 80px;
+	line-height: 0.6;
+	@include phone-portrait {
+		max-width: 100%;
+	}
 }
 
 .subheader {
-  font-weight: 800;
-  font-size: 40px;
-  line-height: 0.6;
-
+	font-weight: 800;
+	font-size: 40px;
+	line-height: 0.6;
 }

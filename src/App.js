@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Elements, StripeProvider } from 'react-stripe-elements';
 
 import NavBar from './navigation/NavBar';
-import LandingPage from './views/landing/LandingPage';
+import LandingPage from './views/Landing/LandingPage';
 import ChoosePlan from './views/billing/ChoosePlan';
 import NewSubCheckout from './views/billing/NewSubCheckout';
 import BrowseBooks from './views/browse/BrowseBooks';
@@ -13,7 +13,7 @@ import SwipeableTemporaryDrawer from './navigation/NavDrawer';
 import { BookContext } from 'Providers/BooksProvider.js';
 import axios from 'axios';
 
-import styles from './scss/components/App.module.scss';
+import styles from './App.module.scss';
 
 function App() {
   const [ state, dispatch ] = useContext(BookContext);

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import styles from '../../scss/components/SubPlanCard.module.scss';
+import styles from './styles/SubPlanCard.module.scss';
 
 function SubPlanCard(props) {
     return (
