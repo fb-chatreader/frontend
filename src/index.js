@@ -5,7 +5,7 @@ import App from './App.js';
 import Providers from 'Providers/';
 
 import 'interceptors/';
-import './index.css';
+import './index.scss';
 
 ReactDOM.render(
   <Providers>

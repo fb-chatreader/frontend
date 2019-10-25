@@ -1,7 +1,7 @@
 import React from 'react';
 import { withRouter, NavLink } from 'react-router-dom';
 
-import styles from '../../scss/components/NavLinksNonAuth.module.scss';
+import styles from './styles/NavLinksNonAuth.module.scss';
 
 const NavLinksNonAuth = () => (
   <div className={styles.navLinksNonAuth}>
