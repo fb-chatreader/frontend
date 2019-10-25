@@ -1,8 +1,8 @@
 export const initialState = {
   books: [],
   categories: [],
-  selectedBook:null,
-  selectedCategory:null
+  selectedBook: null,
+  selectedCategory: null
 };
 
 export function reducer(state, action) {
