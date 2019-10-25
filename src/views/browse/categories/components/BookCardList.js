@@ -1,4 +1,4 @@
-import React from 'views/browse/categories/components/node_modules/react';
+import React from 'react';
 import BookCardListItem from './BookCardListItem';
 import styles from '../styles/BookCardList.module.scss';
 

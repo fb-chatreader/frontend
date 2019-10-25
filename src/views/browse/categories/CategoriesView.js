@@ -1,4 +1,4 @@
-import React, { useState } from 'views/browse/categories/node_modules/react';
+import React, { useState } from 'react';
 import CategoryMenu from './components/CategorySidebarMenu';
 import BookCardList from './components/BookCardList';
 import styles from './CategoriesView.module.scss';
