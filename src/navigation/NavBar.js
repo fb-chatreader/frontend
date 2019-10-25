@@ -4,8 +4,8 @@ import NavLinksNonAuth from './NavLinksNonAuth';
 import styles from './styles/NavBar.module.scss';
 
 // Currently NavBar only renders NavNonAuth
-// If we implement authentication, we can create a NavAuth with different links and styling
-// and pass props to NavBar including an isAuthenticated prop to determine with NavBar type to render:
+// If we implement authentication, we can create a NavLinksAuth with different links and styling
+// and pass props to NavBar including an isAuthenticated prop to determine which NavLinks type to render:
 
 const NavBar = () => (
   <div className={styles.navbar}>
