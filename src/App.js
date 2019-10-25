@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Elements, StripeProvider } from 'react-stripe-elements';
 
@@ -8,6 +8,9 @@ import ChoosePlan from './components/billing/ChoosePlan';
 import NewSubCheckout from './components/billing/NewSubCheckout';
 import BrowseBooks from './components/BrowseBooks/BrowseBooks';
 import BookPage from './components/BrowseBooks/BookPage';
+
+import { BookContext } from 'Providers/BooksProvider.js';
+import axios from 'axios';
 
 import styles from './scss/components/App.module.scss';
 
@@ -19,7 +22,11 @@ function App() {
           <div className={styles.App}>
             <NavBar />
             <Switch>
-              <Route exact path="/chooseplan/:id_token" component={ChoosePlan} />
+              <Route
+                exact
+                path="/chooseplan/:id_token"
+                component={ChoosePlan}
+              />
 
               <Route exact path="/browse">
                 <BrowseBooks />
@@ -29,7 +36,11 @@ function App() {
               {/* <BookPage />
               </Route> */}
 
-              <Route exact path="/checkout/newsub/:id_token/:planNickname/:planID" component={NewSubCheckout} />
+              <Route
+                exact
+                path="/checkout/newsub/:id_token/:planNickname/:planID"
+                component={NewSubCheckout}
+              />
 
               <Route exact path="/">
                 <LandingPage />

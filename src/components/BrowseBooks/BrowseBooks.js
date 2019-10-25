@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext } from 'react';
 import { Route } from 'react-router-dom';
 import { BookContext } from 'Providers/BooksProvider.js';
 
@@ -8,10 +8,7 @@ import styles from '../../scss/components/BrowseBooks.module.scss';
 function BrowseBooks() {
   const [state, dispatch] = useContext(BookContext)();
 
-  useEffect(() => {
-    if (!state.books || !state.books.length) {
-    }
-  }, [state.books, state.categories, dispatch]);
+  // const  = getState();
 
   return (
     <Route exact path="/browse">

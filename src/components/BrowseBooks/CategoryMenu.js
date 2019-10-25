@@ -4,7 +4,8 @@ import styles from '../../scss/components/CategoryMenu.module.scss';
 
 const CategoryMenu = props => {
   const { books, categories, selected, setSelected } = props;
-  const [state, dispatch] = useContext(BookContext)();
+  const getState = useContext(BookContext);
+  const [state, dispatch] = getState();
 
   return (
     <div className={styles.menuContainer}>
