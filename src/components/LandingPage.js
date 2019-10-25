@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
+import styles from '../scss/mixins/_index.scss';
 
 const LandingPage = () => {
     return (
