@@ -1,9 +1,20 @@
 @import '../main.scss';
 
+@import '../main.scss';
+
 .navbar {
 	width: 100%;
-	padding: 20px 0;
-	z-index: 1100;
+	padding: 0;
+  z-index: 1100;
+
+  @include tablet-portrait {
+    
+  }
+  @include phone-portrait {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+  }
 }
 
 .navBarContents {
@@ -13,9 +24,27 @@
   justify-content: space-between;
   align-items: center;
   color: $purpleStuff;
+    @include phone-portrait {
+      display: flex;
+      flex-flow: row;
+      justify-content: space-around;
+      padding: 0 10px;
+    }
 }
 
 .appName {
   color:$activeLinkGray;
-	// margin: 0;
+  
+  @include tablet-portrait {
+    display: flex;
+    flex-flow: row;
+    // justify-content: space-around;
+    padding: 0 10px;
+  }
+  @include phone-portrait {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    padding: 0 10px;
+  }
 }
