@@ -1,6 +1,6 @@
-import React from 'views/browse/summary/components/node_modules/react';
+import React from 'react';
 import styles from '../styles/Summary.module.scss';
-const SingleBook = (props) => {
+const Summary = (props) => {
   return (
     <div className={styles.singleBookContainer}>
       <div>{props.book.title}</div>
@@ -10,4 +10,4 @@ const SingleBook = (props) => {
   );
 };
 
-export default SingleBook;
+export default Summary;

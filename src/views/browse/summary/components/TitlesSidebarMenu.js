@@ -1,8 +1,8 @@
 import React from 'views/browse/summary/components/node_modules/react';
 import { Link } from 'views/browse/summary/components/node_modules/react-router-dom';
-import styles from '../../scss/components/BookPage.module.scss';
+import styles from '../styles/TitlesSidebarMenu.module.scss';
 
-const TitlesMenu = (props) => {
+const TitlesSidebarMenu = (props) => {
   console.log('TitlesMenu props.data.selectedCategory:', props.data.selectedCategory);
   return (
     <div className={styles.titlesMenuContainer}>
@@ -20,4 +20,4 @@ const TitlesMenu = (props) => {
   );
 };
 
-export default TitlesMenu;
+export default TitlesSidebarMenu;

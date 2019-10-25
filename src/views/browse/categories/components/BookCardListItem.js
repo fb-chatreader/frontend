@@ -1,8 +1,8 @@
-import React from 'views/browse/categories/components/node_modules/react';
-import { Link } from 'views/browse/categories/components/node_modules/react-router-dom';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import ShareBook from './ShareBook';
 import SampleImage from '../../../../assets/girl-boss-cover.jpg';
-import styles from './styles/BookCardListItem.module.scss';
+import styles from '../styles/BookCardListItem.module.scss';
 
 function BookCardListItem(props) {
   return (

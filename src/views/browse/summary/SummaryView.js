@@ -1,9 +1,9 @@
-import React, { useContext, useEffect } from 'views/browse/summary/node_modules/react';
-import { useParams } from 'views/browse/summary/node_modules/react-router-dom';
+import React, { useContext, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import Summary from './components/Summary';
 import TitlesSidebarMenu from './components/TitlesSidebarMenu';
-import { BookContext } from 'views/browse/summary/node_modules/Providers/BooksProvider.js.js';
-import styles from '../styles/SummaryView.module.scss';
+import { BookContext } from '../../../Providers/BooksProvider';
+import styles from './SummaryView.module.scss';
 
 const SummaryView = () => {
   const [ state, dispatch ] = useContext(BookContext);

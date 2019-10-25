@@ -7,7 +7,7 @@ import LandingPage from './views/Landing/LandingPage';
 import ChoosePlan from './views/billing/ChoosePlan';
 import NewSubCheckout from './views/billing/NewSubCheckout';
 import BrowseBooks from './views/browse/BrowseBooks';
-import BookPage from './views/browse/summary/SummaryView';
+import SummaryView from './views/browse/summary/SummaryView';
 import SwipeableTemporaryDrawer from './views/navigation/NavDrawer';
 
 import { BookContext } from 'Providers/BooksProvider.js';
@@ -48,8 +48,8 @@ function App() {
                 <BrowseBooks />
               </Route>
 
-              <Route path="/summary/:id" component={BookPage} />
-              {/* <BookPage />
+              <Route path="/summary/:id" component={SummaryView} />
+              {/* <SummaryView />
               </Route> */}
 
               <Route exact path="/checkout/newsub/:id_token/:planNickname/:planID" component={NewSubCheckout} />
