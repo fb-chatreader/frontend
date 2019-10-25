@@ -1,0 +1,48 @@
+@import 'src/styles/scss/main.scss';
+
+.navbar {
+	width: 100%;
+	padding: 0;
+  z-index: 1100;
+
+  @include tablet-portrait {
+    
+  }
+  @include phone-portrait {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+  }
+}
+
+.navBarContents {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: $purpleStuff;
+    @include phone-portrait {
+      display: flex;
+      flex-flow: row;
+      justify-content: space-around;
+      padding: 0 10px;
+    }
+}
+
+.appName {
+  color:$activeLinkGray;
+  
+  @include tablet-portrait {
+    display: flex;
+    flex-flow: row;
+    // justify-content: space-around;
+    padding: 0 10px;
+  }
+  @include phone-portrait {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    padding: 0 10px;
+  }
+}

@@ -1,0 +1,8 @@
+
+
+@mixin background-pattern {
+  background: linear-gradient(135deg, #eee 21px, #ddd 22px, #ddd 24px,transparent 24px, transparent 67px, #ddd 67px, #ddd 69px, transparent 69px),
+  linear-gradient(225deg, #eee 21px, #ddd 22px, #ddd 24px, transparent 24px, transparent 67px, #ddd 67px, #ddd 69px, transparent 69px)0 64px;
+  background-color:#eee;
+  background-size: 64px 128px;
+}

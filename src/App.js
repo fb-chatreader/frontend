@@ -2,17 +2,18 @@ import React, { useContext, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Elements, StripeProvider } from 'react-stripe-elements';
 
-import NavBar from './components/navigation/NavBar';
-import LandingPage from './components/LandingPage';
-import ChoosePlan from './components/billing/ChoosePlan';
-import NewSubCheckout from './components/billing/NewSubCheckout';
-import BrowseBooks from './components/BrowseBooks/BrowseBooks';
-import BookPage from './components/BrowseBooks/BookPage';
+import NavBar from './navigation/NavBar';
+import LandingPage from './views/Landing/LandingPage';
+import ChoosePlan from './views/billing/ChoosePlan';
+import NewSubCheckout from './views/billing/NewSubCheckout';
+import BrowseBooks from './views/browse/BrowseBooks';
+import SummaryView from './views/browse/summary/SummaryView';
+import SwipeableTemporaryDrawer from './navigation/NavDrawer';
 
 import { BookContext } from 'Providers/BooksProvider.js';
 import axios from 'axios';
 
-import styles from './scss/components/App.module.scss';
+import styles from './App.module.scss';
 
 function App() {
   const [ state, dispatch ] = useContext(BookContext);
@@ -33,13 +34,13 @@ function App() {
     [ state.books, state.categories, dispatch ]
   );
 
-  
   return (
     <Router>
       <StripeProvider apiKey="pk_test_szSIHpMw6NMiX62i8aL5W82t00VdTotHmW">
         <Elements>
           <div className={styles.App}>
             <NavBar />
+            <SwipeableTemporaryDrawer />
             <Switch>
               <Route exact path="/chooseplan/:id_token" component={ChoosePlan} />
 
@@ -47,8 +48,8 @@ function App() {
                 <BrowseBooks />
               </Route>
 
-              <Route path="/summary/:id" component={BookPage} />
-              {/* <BookPage />
+              <Route path="/summary/:id" component={SummaryView} />
+              {/* <SummaryView />
               </Route> */}
 
               <Route exact path="/checkout/newsub/:id_token/:planNickname/:planID" component={NewSubCheckout} />

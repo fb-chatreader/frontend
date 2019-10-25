@@ -1,9 +1,0 @@
-.menuContainer {
-  width: 275px;
-  padding: 10px;
-  display: flex;
-  flex-flow: column; }
-
-.filterOption:hover {
-  cursor: pointer;
-  color: blue; }
