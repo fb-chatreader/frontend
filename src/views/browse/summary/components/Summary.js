@@ -1,5 +1,5 @@
-import React from 'react';
-import styles from '../../scss/components/BookPage.module.scss';
+import React from 'views/browse/summary/components/node_modules/react';
+import styles from '../styles/Summary.module.scss';
 const SingleBook = (props) => {
   return (
     <div className={styles.singleBookContainer}>

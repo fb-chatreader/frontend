@@ -2,13 +2,13 @@ import React, { useContext, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Elements, StripeProvider } from 'react-stripe-elements';
 
-import NavBar from './components/navigation/NavBar';
-import LandingPage from './components/Landing/LandingPage';
-import ChoosePlan from './components/billing/ChoosePlan';
-import NewSubCheckout from './components/billing/NewSubCheckout';
-import BrowseBooks from './components/BrowseBooks/BrowseBooks';
-import BookPage from './components/BrowseBooks/SummaryPage/BookPage';
-import SwipeableTemporaryDrawer from './components/navigation/NavDrawer';
+import NavBar from './views/navigation/NavBar';
+import LandingPage from './views/Landing/LandingPage';
+import ChoosePlan from './views/billing/ChoosePlan';
+import NewSubCheckout from './views/billing/NewSubCheckout';
+import BrowseBooks from './views/browse/BrowseBooks';
+import BookPage from './views/browse/summary/SummaryView';
+import SwipeableTemporaryDrawer from './views/navigation/NavDrawer';
 
 import { BookContext } from 'Providers/BooksProvider.js';
 import axios from 'axios';

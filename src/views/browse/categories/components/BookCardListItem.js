@@ -1,10 +1,10 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'views/browse/categories/components/node_modules/react';
+import { Link } from 'views/browse/categories/components/node_modules/react-router-dom';
 import ShareBook from './ShareBook';
-import SampleImage from '../../assets/girl-boss-cover.jpg';
-import styles from '../../scss/components/BookCard.module.scss';
+import SampleImage from '../../../../assets/girl-boss-cover.jpg';
+import styles from './styles/BookCardListItem.module.scss';
 
-function BookCard(props) {
+function BookCardListItem(props) {
   return (
     <div className={styles.bookCard}>
       <Link to={`/summary/${props.book.id}`} className={styles.header}>
@@ -29,4 +29,4 @@ function BookCard(props) {
   );
 }
 
-export default BookCard;
+export default BookCardListItem;

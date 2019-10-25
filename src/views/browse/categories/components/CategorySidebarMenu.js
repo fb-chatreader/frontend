@@ -1,6 +1,6 @@
-import React, { useContext } from 'react';
-import { BookContext } from 'Providers/BooksProvider.js';
-import styles from '../../scss/components/CategoryMenu.module.scss';
+import React, { useContext } from 'views/browse/categories/components/node_modules/react';
+import { BookContext } from 'views/browse/categories/components/node_modules/Providers/BooksProvider.js.js';
+import styles from '../styles/CategorySidebarMenu.module.scss';
 
 const CategoryMenu = (props) => {
   const { books, categories, selected, setSelected } = props;

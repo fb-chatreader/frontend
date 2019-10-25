@@ -1,14 +1,14 @@
-import React from 'react';
-import BookCard from './BookCardItem';
-import styles from '../../scss/components/BooksGrid.module.scss';
+import React from 'views/browse/categories/components/node_modules/react';
+import BookCardListItem from './BookCardListItem';
+import styles from '../styles/BookCardList.module.scss';
 
-function BooksGrid(props) {
+function BookCardList(props) {
   return (
     <div className={styles.booksGrid}>
       {props.books.filter((b) => b.category === props.selected).sort((a, b) => b.rating_qty - a.rating_qty).map((b) => {
         return (
           <div className={styles.gridItem} key={b.id}>
-            <BookCard book={b} />
+            <BookCardListItem book={b} />
           </div>
         );
       })}
@@ -16,4 +16,4 @@ function BooksGrid(props) {
   );
 }
 
-export default BooksGrid;
+export default BookCardList;

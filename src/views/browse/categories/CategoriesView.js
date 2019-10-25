@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState } from 'views/browse/categories/node_modules/react';
 import CategoryMenu from './components/CategorySidebarMenu';
-import BooksGrid from './components/BookCardList';
-import styles from '../../scss/components/BrowseCats.module.scss';
+import BookCardList from './components/BookCardList';
+import styles from './CategoriesView.module.scss';
 
-const BrowseCategories = (props) => {
+const CategoriesView = (props) => {
   const { books, categories } = props;
   const [ selected, setSelected ] = useState(null);
 
@@ -12,7 +12,7 @@ const BrowseCategories = (props) => {
       <CategoryMenu books={books} categories={categories} selected={selected} setSelected={setSelected} />
       {selected ? (
         <div className={styles.gridContainer}>
-          <BooksGrid books={books} selected={selected} />
+          <BookCardList books={books} selected={selected} />
         </div>
       ) : (
         <p className={styles.placeholder}>Please select a category to continue</p>
@@ -21,4 +21,4 @@ const BrowseCategories = (props) => {
   );
 };
 
-export default BrowseCategories;
+export default CategoriesView;

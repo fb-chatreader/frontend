@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'views/browse/summary/components/node_modules/react';
+import { Link } from 'views/browse/summary/components/node_modules/react-router-dom';
 import styles from '../../scss/components/BookPage.module.scss';
 
 const TitlesMenu = (props) => {

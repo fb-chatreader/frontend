@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'views/browse/categories/components/node_modules/react';
 
-import { FacebookShareButton, TwitterShareButton, EmailShareButton } from 'react-share';
+import { FacebookShareButton, TwitterShareButton, EmailShareButton } from 'views/browse/categories/components/node_modules/react-share';
 import { SMS } from '../../../../util/smsLinkCreator';
-import { FacebookIcon, TwitterIcon, EmailIcon } from 'react-share';
+import { FacebookIcon, TwitterIcon, EmailIcon } from 'views/browse/categories/components/node_modules/react-share';
 
 import '../../scss/components/ShareBook.scss';
 

@@ -3,8 +3,8 @@ import { Route } from 'react-router-dom';
 import axios from 'axios';
 import { BookContext } from 'Providers/BooksProvider.js';
 
-import Categories from './CategoriesPage/CategoriesView';
-import styles from '../../scss/components/BrowseBooks.module.scss';
+import CategoriesView from './categories/CategoriesView';
+import styles from './BrowseBooks.module.scss';
 
 function BrowseBooks() {
   const [ state, dispatch ] = useContext(BookContext);
@@ -28,7 +28,7 @@ function BrowseBooks() {
   return (
     <Route exact path="/browse">
       <div className={styles.browseBooks}>
-        {state.categories && <BrowseCategories categories={state.categories} books={state.books} />}
+        {state.categories && <CategoriesView categories={state.categories} books={state.books} />}
       </div>
     </Route>
   );
