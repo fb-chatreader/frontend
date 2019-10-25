@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { FacebookShareButton, TwitterShareButton, EmailShareButton } from 'react-share';
-import { SMS } from '../../util/smsLinkCreator';
+import { SMS } from '../../../../util/smsLinkCreator';
 import { FacebookIcon, TwitterIcon, EmailIcon } from 'react-share';
 
 import '../../scss/components/ShareBook.scss';

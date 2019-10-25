@@ -7,7 +7,7 @@ import LandingPage from './components/Landing/LandingPage';
 import ChoosePlan from './components/billing/ChoosePlan';
 import NewSubCheckout from './components/billing/NewSubCheckout';
 import BrowseBooks from './components/BrowseBooks/BrowseBooks';
-import BookPage from './components/BrowseBooks/BookPage';
+import BookPage from './components/BrowseBooks/SummaryPage/BookPage';
 import SwipeableTemporaryDrawer from './components/navigation/NavDrawer';
 
 import { BookContext } from 'Providers/BooksProvider.js';

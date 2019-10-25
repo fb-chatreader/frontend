@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import SingleBook from './SingleBook';
-import TitlesMenu from './TitlesMenu';
+import SingleBook from './components/Summary';
+import TitlesMenu from './components/TitlesSidebarMenu';
 import { BookContext } from 'Providers/BooksProvider.js';
 import styles from '../../scss/components/BookPage.module.scss';
 

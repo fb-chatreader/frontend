@@ -3,7 +3,7 @@ import { Route } from 'react-router-dom';
 import axios from 'axios';
 import { BookContext } from 'Providers/BooksProvider.js';
 
-import BrowseCategories from './BrowseCategories';
+import Categories from './CategoriesPage/CategoriesView';
 import styles from '../../scss/components/BrowseBooks.module.scss';
 
 function BrowseBooks() {

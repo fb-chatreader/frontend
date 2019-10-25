@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import CategoryMenu from './CategoryMenu';
-import BooksGrid from './BooksGrid';
+import CategoryMenu from './components/CategorySidebarMenu';
+import BooksGrid from './components/BookCardList';
 import styles from '../../scss/components/BrowseCats.module.scss';
 
 const BrowseCategories = (props) => {

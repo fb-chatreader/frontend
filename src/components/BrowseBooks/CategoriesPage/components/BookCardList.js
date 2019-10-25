@@ -1,5 +1,5 @@
 import React from 'react';
-import BookCard from './BookCard';
+import BookCard from './BookCardItem';
 import styles from '../../scss/components/BooksGrid.module.scss';
 
 function BooksGrid(props) {
