@@ -1,8 +1,13 @@
 .menuContainer {
-  max-width: 300px;
-  width: 100%;
-  display: flex;
-  position: fixed;
-  flex-flow: column;
-  top:100px;
+	// position: fixed;
+	// top: 100px;
+	width: 275px;
+	padding: 10px;
+	display: flex;
+	flex-flow: column;
+}
+
+.filterOption:hover {
+	cursor: pointer;
+	color: blue;
 }

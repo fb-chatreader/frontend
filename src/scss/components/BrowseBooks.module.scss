@@ -1,17 +1,17 @@
 .browseBooks {
 	display: flex;
 	flex-direction: row;
-  justify-content:space-around;
-  align-items: flex-end;
-  // .genreMenu {
-  //   margin: 5px;
-  // }
-  // .booksGridContainer {
-  //   max-width: 800px;
-  // }
-  .filterOption:hover {
-    cursor: pointer;
-  }
+	justify-content: space-around;
+	align-items: flex-end;
+	// .genreMenu {
+	//   margin: 5px;
+	// }
+	// .booksGridContainer {
+	//   max-width: 800px;
+	// }
+	.filterOption:hover {
+		cursor: pointer;
+	}
 }
 
 // .menusContainer {
@@ -19,6 +19,3 @@
 // 	display: flex;
 // 	justify-content: flex-start;
 // }
-
-
-

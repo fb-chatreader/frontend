@@ -3,14 +3,19 @@ import { Link } from 'react-router-dom';
 import styles from '../../scss/components/BookPage.module.scss';
 
 const TitlesMenu = (props) => {
+  console.log('TitlesMenu props.data.selectedCategory:', props.data.selectedCategory);
   return (
     <div className={styles.titlesMenuContainer}>
-      {props.data.books
-        .filter((b) => b.category === props.data.selectedCategory)
-        .sort((a, b) => b.rating_qty - a.rating_qty)
-        .map((b) => {
-          return <Link to={`/summary/${b.id}`}>{b.title}</Link>;
-        })}
+      {(props.books && props.selectedCategory) ? (
+        props.books
+          .filter((b) => b.category === props.selectedCategory)
+          .sort((a, b) => b.rating_qty - a.rating_qty)
+          .map((b) => {
+            return <Link to={`/summary/${b.id}`}>{b.title}</Link>;
+          })
+      ) : (
+        <p>Loading titles...</p>
+      )}
     </div>
   );
 };

@@ -8,7 +8,7 @@ function BookCard(props) {
   return (
     <div className={styles.bookCard}>
       <Link to={`/summary/${props.book.id}`} className={styles.header}>
-        <img className={styles.bookImage} src={SampleImage} alt="book-cover" />
+        <img className={styles.bookImage} src={props.book.image_url} alt="book-cover" />
         <h2 className={styles.titleText}>{props.book.title}</h2>
       </Link>
       <div className={styles.footer}>

@@ -2,14 +2,13 @@ import React, { useContext } from 'react';
 import { BookContext } from 'Providers/BooksProvider.js';
 import styles from '../../scss/components/CategoryMenu.module.scss';
 
-const BookCategories = (props) => {
+const CategoryMenu = (props) => {
   const { books, categories, selected, setSelected } = props;
   const [ state, dispatch ] = useContext(BookContext);
 
   return (
     <div className={styles.menuContainer}>
-      <div className={styles.genreMenu}>
-        <h3>Genres</h3>
+        <h3>Categories</h3>
         <ul>
           {categories.map((category) => (
             <div
@@ -30,9 +29,8 @@ const BookCategories = (props) => {
             </div>
           ))}
         </ul>
-      </div>
     </div>
   );
 };
 
-export default BookCategories;
+export default CategoryMenu;
