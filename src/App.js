@@ -8,6 +8,7 @@ import ChoosePlan from './components/billing/ChoosePlan';
 import NewSubCheckout from './components/billing/NewSubCheckout';
 import BrowseBooks from './components/BrowseBooks/BrowseBooks';
 import BookPage from './components/BrowseBooks/BookPage';
+import SwipeableTemporaryDrawer from './components/navigation/NavDrawer';
 
 import { BookContext } from 'Providers/BooksProvider.js';
 import axios from 'axios';
@@ -39,6 +40,7 @@ function App() {
         <Elements>
           <div className={styles.App}>
             <NavBar />
+            <SwipeableTemporaryDrawer />
             <Switch>
               <Route exact path="/chooseplan/:id_token" component={ChoosePlan} />
 
