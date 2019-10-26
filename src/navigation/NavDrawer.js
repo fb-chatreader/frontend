@@ -23,10 +23,7 @@ const useStyles = makeStyles({
 export default function SwipeableTemporaryDrawer() {
   const classes = useStyles();
   const [ state, setState ] = React.useState({
-    top: false,
     left: false,
-    bottom: false,
-    right: false
   });
 
   const toggleDrawer = (side, open) => (event) => {
