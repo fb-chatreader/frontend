@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
 import Button from '@material-ui/core/Button';
@@ -48,39 +48,56 @@ export default function NavBar() {
       onClick={toggleDrawer(side, false)}
       onKeyDown={toggleDrawer(side, false)}
     >
+      <h3 style={{ textAlign: 'center' }}>CHATWISE</h3>
+      <Divider />
       <List>
-        <Link exact to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+        <NavLink
+          exact
+          to="/"
+          activeStyle={{
+            fontWeight: 'bold',
+            color: '#ddd'
+          }}
+          style={{ textDecoration: 'none', color: 'inherit' }}
+        >
           <ListItem button>
             <ListItemIcon>
               <HomeIcon />
             </ListItemIcon>
             <ListItemText>Home</ListItemText>
           </ListItem>
-        </Link>
-        <Link to="/browse" style={{ textDecoration: 'none', color: 'inherit' }}>
+        </NavLink>
+        <NavLink
+          to="/browse"
+          activeStyle={{
+            fontWeight: 'bold',
+            color: '#ddd'
+          }}
+          style={{ textDecoration: 'none', color: 'inherit' }}
+        >
           <ListItem button>
             <ListItemIcon>
               <SearchIcon />
             </ListItemIcon>
             <ListItemText>Browse</ListItemText>
           </ListItem>
-        </Link>
+        </NavLink>
       </List>
       <Divider />
       <List>
+        {/* <NavLink
+          to="/"
+          activeStyle={{
+            fontWeight: 'bold',
+            color: '#ddd'
+          }}
+        > */}
         <ListItem button>
           <ListItemIcon>{}</ListItemIcon>
           <ListItemText>Log In</ListItemText>
         </ListItem>
+        {/* </NavLink> */}
       </List>
-      {/* <List>
-        {[ 'All mail', 'Trash', 'Spam' ].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
-      </List> */}
     </div>
   );
 
