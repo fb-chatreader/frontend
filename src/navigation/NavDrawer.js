@@ -10,6 +10,8 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
+import SearchIcon from '@material-ui/icons/Search';
+import HomeIcon from '@material-ui/icons/Home';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import NavLinksNonAuth from './NavLinksNonAuth';
@@ -47,22 +49,38 @@ export default function NavBar() {
       onKeyDown={toggleDrawer(side, false)}
     >
       <List>
-        {[ 'Inbox', 'Starred', 'Send email', 'Drafts' ].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-            <ListItemText primary={text} />
+        <Link exact to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+          <ListItem button>
+            <ListItemIcon>
+              <HomeIcon />
+            </ListItemIcon>
+            <ListItemText>Home</ListItemText>
           </ListItem>
-        ))}
+        </Link>
+        <Link to="/browse" style={{ textDecoration: 'none', color: 'inherit' }}>
+          <ListItem button>
+            <ListItemIcon>
+              <SearchIcon />
+            </ListItemIcon>
+            <ListItemText>Browse</ListItemText>
+          </ListItem>
+        </Link>
       </List>
       <Divider />
       <List>
+        <ListItem button>
+          <ListItemIcon>{}</ListItemIcon>
+          <ListItemText>Log In</ListItemText>
+        </ListItem>
+      </List>
+      {/* <List>
         {[ 'All mail', 'Trash', 'Spam' ].map((text, index) => (
           <ListItem button key={text}>
             <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
             <ListItemText primary={text} />
           </ListItem>
         ))}
-      </List>
+      </List> */}
     </div>
   );
 
