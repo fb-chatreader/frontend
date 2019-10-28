@@ -10,6 +10,10 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
+import IconButton from '@material-ui/core/IconButton';
+import MenuIcon from '@material-ui/icons/Menu';
+import RESP_DEVICE_WIDTHS from '../styles/constants';
+import styles from './styles/NavBar.module.scss';
 
 const useStyles = makeStyles({
   list: {
@@ -20,10 +24,10 @@ const useStyles = makeStyles({
   }
 });
 
-export default function SwipeableTemporaryDrawer() {
+export default function NavBar() {
   const classes = useStyles();
   const [ state, setState ] = React.useState({
-    left: false,
+    left: false
   });
 
   const toggleDrawer = (side, open) => (event) => {
@@ -89,8 +93,11 @@ export default function SwipeableTemporaryDrawer() {
   );
 
   return (
-    <div>
-      <Button onClick={toggleDrawer('left', true)}>Open Left</Button>
+    <div className={styles.navBarContents}>
+      <Button onClick={toggleDrawer('left', true)}>
+        <MenuIcon fontSize={'large'} />
+      </Button>
+      <h1>WHWHWHWHWHWH</h1>
       <SwipeableDrawer open={state.left} onClose={toggleDrawer('left', false)} onOpen={toggleDrawer('left', true)}>
         {sideList('left')}
       </SwipeableDrawer>

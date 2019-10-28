@@ -2,13 +2,13 @@ import React, { useContext, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Elements, StripeProvider } from 'react-stripe-elements';
 
-import NavBar from './navigation/NavBar';
+// import NavBar from './navigation/NavBar';
 import LandingPage from './views/Landing/LandingPage';
 import ChoosePlan from './views/billing/ChoosePlan';
 import NewSubCheckout from './views/billing/NewSubCheckout';
 import BrowseBooks from './views/browse/BrowseBooks';
 import SummaryView from './views/browse/summary/SummaryView';
-import SwipeableTemporaryDrawer from './navigation/NavDrawer';
+import NavBar from './navigation/NavDrawer';
 
 import { BookContext } from 'Providers/BooksProvider.js';
 import axios from 'axios';
@@ -40,7 +40,6 @@ function App() {
         <Elements>
           <div className={styles.App}>
             <NavBar />
-            <SwipeableTemporaryDrawer />
             <Switch>
               <Route exact path="/chooseplan/:id_token" component={ChoosePlan} />
 
