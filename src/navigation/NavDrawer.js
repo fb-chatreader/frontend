@@ -95,8 +95,8 @@ export default function NavBar() {
 
   return (
     <div className={styles.navBarContents}>
-      <Button onClick={toggleDrawer('left', true)}>
-        <MenuIcon fontSize={'large'} />
+      <Button className={styles.menuBtnContainer} onClick={toggleDrawer('left', true)}>
+        <MenuIcon className={styles.menuBtn} fontSize={'large'} />
       </Button>
       <div className={styles.appName}>
         <h1>CHATWISE</h1>
