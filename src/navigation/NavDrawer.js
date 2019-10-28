@@ -67,6 +67,7 @@ export default function NavBar() {
             <ListItemText>Home</ListItemText>
           </ListItem>
         </NavLink>
+
         <NavLink
           to="/browse"
           activeStyle={{
