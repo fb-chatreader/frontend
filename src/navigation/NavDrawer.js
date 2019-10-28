@@ -12,6 +12,7 @@ import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
+import NavLinksNonAuth from './NavLinksNonAuth';
 import RESP_DEVICE_WIDTHS from '../styles/constants';
 import styles from './styles/NavBar.module.scss';
 
@@ -97,7 +98,12 @@ export default function NavBar() {
       <Button onClick={toggleDrawer('left', true)}>
         <MenuIcon fontSize={'large'} />
       </Button>
-      <h1>WHWHWHWHWHWH</h1>
+      <div className={styles.appName}>
+        <h1>CHATWISE</h1>
+      </div>
+      <div className={styles.linksContainter}>
+        <NavLinksNonAuth />
+      </div>
       <SwipeableDrawer open={state.left} onClose={toggleDrawer('left', false)} onOpen={toggleDrawer('left', true)}>
         {sideList('left')}
       </SwipeableDrawer>

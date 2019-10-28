@@ -17,6 +17,7 @@
 
 .navBarContents {
   max-width: 1000px;
+  width:100%;
   margin: 0 auto;
   display: flex;
   flex-flow: row;
@@ -26,9 +27,16 @@
     @include phone-portrait {
       display: flex;
       flex-flow: row;
-      justify-content: space-around;
+      // justify-content: space-around;
       padding: 0 10px;
     }
+}
+
+.linksContainter {
+
+  @include phone-portrait {
+    display: none;
+  }
 }
 
 .appName {
