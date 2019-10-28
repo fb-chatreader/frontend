@@ -17,32 +17,68 @@
 
 .navBarContents {
   max-width: 1000px;
+  width:100%;
   margin: 0 auto;
   display: flex;
+  flex-flow: row;
   justify-content: space-between;
   align-items: center;
   color: $purpleStuff;
     @include phone-portrait {
       display: flex;
       flex-flow: row;
-      justify-content: space-around;
+      // justify-content: space-around;
       padding: 0 10px;
     }
 }
 
+.linksContainter {
+  @include phone-portrait {
+    display: none;
+  }
+}
+
+.menuBtnContainer {
+  margin: 0;
+  padding:0;
+
+}
+
+.menuBtn {
+  color: $softRed;
+  display: none;
+  padding:5px;
+  border: solid 1px $softRed;
+  border-radius: 3px;
+  margin:0;
+  transition:  1000ms;
+  &:hover {
+    background-color: $softRed;
+    color:#fff;
+    font-weight: 800;
+  }
+  @include phone-portrait {
+    display: block;
+  }
+}
+
 .appName {
   color:$activeLinkGray;
+  display: flex;
+  flex-flow: row;
   
   @include tablet-portrait {
+    width: 100%;
     display: flex;
     flex-flow: row;
-    // justify-content: space-around;
+    justify-content: center;
     padding: 0 10px;
   }
   @include phone-portrait {
+    width: 100%;
     display: flex;
     flex-flow: row;
-    justify-content: space-around;
-    padding: 0 10px;
+    justify-content: flex-start;
+    
   }
 }
