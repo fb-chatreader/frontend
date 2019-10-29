@@ -9,23 +9,6 @@ import styles from './BrowseBooks.module.scss';
 function BrowseBooks() {
   // const [ state, dispatch ] = useContext(BookContext)();
   const [ state ] = useContext(BookContext)();
-
-  // useEffect(
-  //   () => {
-  //     if (!state.books || !state.books.length) {
-  //       console.log('BrowseBooks requesting API');
-  //       axios.get('/api/books/').then((res) => {
-  //         const categories = Array.from(new Set(res.data.map(({ category }) => category))).sort();
-  //         dispatch({ type: 'POPULATE_BOOKS', payload: res.data });
-  //         dispatch({
-  //           type: 'POPULATE_CATEGORIES',
-  //           payload: categories
-  //         });
-  //       });
-  //     }
-  //   },
-  //   [ state.books, state.categories, dispatch ]
-  // );
   
   return (
     <Route exact path="/browse">

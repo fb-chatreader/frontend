@@ -28,5 +28,3 @@ export function BooksProvider(props) {
 
   return <Provider value={getState}>{props.children}</Provider>;
 }
-
-// return <Provider value={useReducer(reducer, initialState)}>{props.children}</Provider>;
