@@ -13,9 +13,11 @@
 }
 
 .categoriesHeader {
+  // text-align: center;
   font-weight: 900;
   font-size: 40px;
   margin: 0;
+  padding: 0 10px;
 }
 
 .filterOptionContainer {
@@ -26,7 +28,8 @@
   @include phone-portrait {
     font-size: 30px;
     display: flex;
-    padding: 20px 10px;
+    padding: 0px 10px;
+    margin: 10px 0px;
     flex-direction: column;
     flex-flow: wrap;
     justify-content: space-between;

@@ -16,7 +16,7 @@ const CategoriesView = (props) => {
         </div>
       ) : (
         <div className={styles.placeholderContainer}>
-          <p className={styles.placeholder}>Select a category to start browsing.</p>
+          <p className={styles.placeholder}>Select a category to begin browsing.</p>
         </div>
       )}
     </div>
