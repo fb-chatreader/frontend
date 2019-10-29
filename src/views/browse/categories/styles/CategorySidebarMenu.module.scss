@@ -26,7 +26,6 @@
   @include phone-portrait {
     font-size: 30px;
     display: flex;
-    width: 100%;
     padding: 20px 10px;
     flex-direction: column;
     flex-flow: wrap;
@@ -44,5 +43,5 @@
 
 .filterOption:hover {
 	cursor: pointer;
-	color: blue;
+	color:$softRed;
 }

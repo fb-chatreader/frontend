@@ -54,9 +54,10 @@ $woman-reading: '../../../assets/woman_reading_2.jpg';
     font-size: 80px;
     line-height: 0.7;
     @include phone-portrait {
-      width: 100%;
-      padding: 10px;
-      font-size: 42px;
+      width: auto;
+      padding: 0px 37px;
+      font-size: 53px;
+      margin: 14px 0px;
     }
 	}
 }
