@@ -15,11 +15,14 @@ export function BooksProvider(props) {
       axios
         .get('/api/books/')
         .then(res => {
+          const books = res.data;
           const categories = Array.from(new Set(res.data.map(({ category }) => category))).sort();
-          dispatch({ type: 'POPULATE_BOOKS', payload: res.data });
-          dispatch({
-            type: 'POPULATE_CATEGORIES',
-            payload: categories
+          dispatch({ 
+            type: 'POPULATE_BOOKS_AND_CATEGORIES', 
+            payload: {
+              books,
+              categories
+            } 
           });
         });
     }

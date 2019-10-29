@@ -7,10 +7,8 @@ export const initialState = {
 
 export function reducer(state, action) {
   switch (action.type) {
-    case 'POPULATE_BOOKS':
-      return { ...state, books: action.payload };
-    case 'POPULATE_CATEGORIES':
-      return { ...state, categories: action.payload };
+    case 'POPULATE_BOOKS_AND_CATEGORIES':
+      return { ...state, books: action.payload.books, categories: action.payload.categories };
       case 'SELECTED_BOOK':
         return { ...state, categories: action.payload };
       case 'SELECTED_CATEGORY':
