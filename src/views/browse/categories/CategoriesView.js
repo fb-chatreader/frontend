@@ -15,7 +15,9 @@ const CategoriesView = (props) => {
           <BookCardList books={books} selected={selected} />
         </div>
       ) : (
-        <p className={styles.placeholder}>Please select a category to continue</p>
+        <div className={styles.placeholderContainer}>
+          <p className={styles.placeholder}>Select a category to start browsing.</p>
+        </div>
       )}
     </div>
   );
