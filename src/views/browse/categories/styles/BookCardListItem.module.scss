@@ -1,3 +1,5 @@
+@import '../../../../styles/scss/main.scss';
+
 .bookCard {
 	display: flex;
 	flex-direction: column;
@@ -5,7 +7,11 @@
 	border: 1px solid lightgrey;
 	border-radius: 5px;
 	height: 300px;
-	width: 250px;
+  width: 250px;
+  @include phone-portrait {
+    width: 100%;
+    height:177px;
+  }
 }
 
 .header {
@@ -19,11 +25,14 @@
 	height: auto;
 	position: absolute;
 	top: -30%;
-	left: 0px;
+  left: 0px;
+  @include phone-portrait {
+    display:none;
+  }
 }
 
 .titleText {
-	position: absolute;
+  position: absolute;
 	bottom: 0px;
 	left: 0px;
 	max-width: 90%;
@@ -33,6 +42,10 @@
 	text-align: left;
 	overflow-wrap: word-break;
 	background-color: #99ccff;
+  @include phone-portrait {
+    font-size: 28px;
+    color:#222;
+  }
 }
 
 .footer {
@@ -57,6 +70,11 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+  @include phone-portrait {
+    display:flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
 }
 
 .summaryBtn {
@@ -65,13 +83,18 @@
 	font-size: 12px;
 	border-radius: 7px;
 	background-color: #bde097;
-	cursor: pointer;
+  cursor: pointer;
 
 	button {
 		padding: 0;
 		border: none;
-		background-color: none;
 		background-color: #bde097;
-		cursor: pointer;
+    cursor: pointer;
+    @include phone-portrait {
+      color:#222;
+      padding:5px;
+      font-size: 18px;
+      font-weight: 600;
+    }
 	}
 }

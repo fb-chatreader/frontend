@@ -1,15 +1,12 @@
 @import '../../../../styles/scss/main.scss';
 
 .menuContainer {
-	
 	width: 275px;
 	display: flex;
   flex-flow: column;
-  
   @include phone-portrait {
     width: 100%;
   }
-  
 }
 
 .categoriesHeader {

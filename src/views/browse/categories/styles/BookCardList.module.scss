@@ -1,12 +1,13 @@
+@import '../../../../styles/scss/main.scss';
+
 .booksGrid {
-	// position: relative;
 	max-width: 800px;
 	width: 100%;
 	display: flex;
 	flex-wrap: wrap;
-	// left: 300px;
-	// top: 100px;
-	// margin: 0 20%;
+  @include phone-portrait {
+    flex-direction: column;
+  }
 }
 
 .gridItem {
