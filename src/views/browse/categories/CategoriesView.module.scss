@@ -22,19 +22,30 @@ $woman-reading: '../../../assets/woman_reading_2.jpg';
 	display: flex;
 	flex-direction: row;
   justify-content: center;
+  @include phone-portrait {
+    flex-direction: column;
+  }
   
   .placeholderContainer {
     // width: 700px;
-		top: 100px;
+		margin-top: 18px;
     left: 300px;
     background:url($woman-reading);
     background-repeat: no-repeat;
     background-size: cover;
+    @include phone-portrait {
+      width: 100%;
+      display:flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+      
+    }
   }
   
 	.placeholder {
     width: 700px;
-		top: 100px;
+		// top: 100px;
     left: 300px;
     padding: 60px;
     background-color: rgba(255, 255, 255,0.2);
@@ -43,7 +54,9 @@ $woman-reading: '../../../assets/woman_reading_2.jpg';
     font-size: 80px;
     line-height: 0.7;
     @include phone-portrait {
-      max-width: 100%;
+      width: 100%;
+      padding: 10px;
+      font-size: 42px;
     }
 	}
 }

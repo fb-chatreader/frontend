@@ -8,8 +8,8 @@ const CategoryMenu = (props) => {
 
   return (
     <div className={styles.menuContainer}>
-      <h3>Categories</h3>
-      <ul>
+      <h3 className={styles.categoriesHeader}>Categories</h3>
+      <ul className={styles.filterOptionContainer}>
         {categories.map((category) => (
           <div
             className={styles.filterOption}
