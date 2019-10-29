@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import styles from '../styles/TitlesSidebarMenu.module.scss';
 
 const TitlesSidebarMenu = (props) => {
-  console.log('TitlesMenu props.data.selectedCategory:', props.data.selectedCategory);
   return (
     <div className={styles.titlesMenuContainer}>
       {props.books && props.selectedCategory ? (

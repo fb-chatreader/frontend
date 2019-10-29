@@ -7,16 +7,26 @@ export const BookContext = createContext();
 export function BooksProvider(props) {
   const { Provider } = BookContext;
 
-  // const [state, dispatch] = useReducer(reducer, initialState);
+  const [state, dispatch] = useReducer(reducer, initialState);
 
-  // const getState = () => {
-  //   if (!state.books.length) {
-  //     axios
-  //       .get('/api/books/')
-  //       .then(res => dispatch({ type: 'POPULATE_BOOKS', payload: res.data }));
-  //   }
-  //   return [state, dispatch];
-  // };
+  const getState = () => {
+    if (!state.books.length) {
+      console.log('Books API called in BooksProvider');
+      axios
+        .get('/api/books/')
+        .then(res => {
+          const categories = Array.from(new Set(res.data.map(({ category }) => category))).sort();
+          dispatch({ type: 'POPULATE_BOOKS', payload: res.data });
+          dispatch({
+            type: 'POPULATE_CATEGORIES',
+            payload: categories
+          });
+        });
+    }
+    return [state, dispatch];
+  };
 
-  return <Provider value={useReducer(reducer, initialState)}>{props.children}</Provider>;
+  return <Provider value={getState}>{props.children}</Provider>;
 }
+
+// return <Provider value={useReducer(reducer, initialState)}>{props.children}</Provider>;

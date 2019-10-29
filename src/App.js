@@ -17,23 +17,23 @@ import axios from 'axios';
 import styles from './App.module.scss';
 
 function App() {
-  const [ state, dispatch ] = useContext(BookContext);
+  const [ state ] = useContext(BookContext)();
 
-  useEffect(
-    () => {
-      if (!state.books || !state.books.length) {
-        axios.get('/api/books/').then((res) => {
-          const categories = Array.from(new Set(res.data.map(({ category }) => category))).sort();
-          dispatch({ type: 'POPULATE_BOOKS', payload: res.data });
-          dispatch({
-            type: 'POPULATE_CATEGORIES',
-            payload: categories
-          });
-        });
-      }
-    },
-    [ state.books, state.categories, dispatch ]
-  );
+  // useEffect(
+  //   () => {
+  //     if (!state.books || !state.books.length) {
+  //       axios.get('/api/books/').then((res) => {
+  //         const categories = Array.from(new Set(res.data.map(({ category }) => category))).sort();
+  //         dispatch({ type: 'POPULATE_BOOKS', payload: res.data });
+  //         dispatch({
+  //           type: 'POPULATE_CATEGORIES',
+  //           payload: categories
+  //         });
+  //       });
+  //     }
+  //   },
+  //   [ state.books, state.categories, dispatch ]
+  // );
 
   return (
     <Router>

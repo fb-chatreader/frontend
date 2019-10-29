@@ -6,7 +6,7 @@ import { BookContext } from '../../../Providers/BooksProvider';
 import styles from './SummaryView.module.scss';
 
 const SummaryView = () => {
-  const [ state, dispatch ] = useContext(BookContext);
+  const [ state ] = useContext(BookContext)();
 
   const { id } = useParams();
   const _id = parseInt(id);

@@ -4,7 +4,7 @@ import styles from '../styles/CategorySidebarMenu.module.scss';
 
 const CategoryMenu = (props) => {
   const { books, categories, selected, setSelected } = props;
-  const [ state, dispatch ] = useContext(BookContext);
+  const [ state ] = useContext(BookContext)();
 
   return (
     <div className={styles.menuContainer}>
@@ -15,10 +15,10 @@ const CategoryMenu = (props) => {
             className={styles.filterOption}
             key={category}
             onClick={(e) => {
-              dispatch({
-                type: 'SELECTED_CATEGORY',
-                payload: category
-              });
+              // dispatch({
+              //   type: 'SELECTED_CATEGORY',
+              //   payload: category
+              // });
               return setSelected(category);
             }}
             style={{
