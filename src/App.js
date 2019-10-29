@@ -6,6 +6,7 @@ import { Elements, StripeProvider } from 'react-stripe-elements';
 import LandingPage from './views/Landing/LandingPage';
 import ChoosePlan from './views/billing/ChoosePlan';
 import NewSubCheckout from './views/billing/NewSubCheckout';
+import PublicPricePage from './views/billing/PublicPricePage';
 import BrowseBooks from './views/browse/BrowseBooks';
 import SummaryView from './views/browse/summary/SummaryView';
 import NavBar from './navigation/NavDrawer';
@@ -42,6 +43,8 @@ function App() {
             <NavBar />
             <Switch>
               <Route exact path="/chooseplan/:id_token" component={ChoosePlan} />
+
+              <Route exact path="/publicpricing" component={PublicPricePage} />
 
               <Route exact path="/browse">
                 <BrowseBooks />

@@ -15,6 +15,13 @@ const NavLinksNonAuth = () => (
     >
       Checkout
     </NavLink> */}
+    <NavLink
+      to='/publicpricing'
+      className={styles.navLink}
+      activeStyle={{ color: 'black' }}
+    >
+      Pricing
+    </NavLink>
     <NavLink to="/browse" className={styles.navLink} activeStyle={{ color: '#ddd' }}>
       Browse Books
     </NavLink>

@@ -21,14 +21,15 @@ function SubPlanCard(props) {
             {props.plan.user_is_subscribed ? (
                 <p>You are subscribed to this plan</p>
             ) : (
-                <Link
-                exact
-                to={`/checkout/newsub/${props.id_token}/${props.plan.nickname}/${props.plan.id}`}
-                >
-                <button className={styles.selectPlanBtn}>
-                    Select Plan
-                </button>
-                </Link>
+                props.id_token && 
+                    <Link
+                        exact
+                        to={`/checkout/newsub/${props.id_token}/${props.plan.nickname}/${props.plan.id}`}
+                    >
+                        <button className={styles.selectPlanBtn}>
+                            Select Plan
+                        </button>
+                    </Link>  
             )}
         </div>
     )

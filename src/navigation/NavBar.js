@@ -7,8 +7,8 @@ import MenuIcon from '@material-ui/icons/Menu';
 import RESP_DEVICE_WIDTHS from '../styles/constants';
 
 // Currently NavBar only renders NavNonAuth
-// If we implement authentication, we can create a NavAuth with different links and styling
-// and pass props to NavBar including an isAuthenticated prop to determine with NavBar type to render:
+// If we implement authentication, we can create a NavLinksAuth with different links and styling
+// and pass props to NavBar including an isAuthenticated prop to determine which NavLinks type to render:
 
 const NavBar = () => {
   return (
