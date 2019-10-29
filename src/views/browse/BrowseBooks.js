@@ -7,7 +7,6 @@ import CategoriesView from './categories/CategoriesView';
 import styles from './BrowseBooks.module.scss';
 
 function BrowseBooks() {
-  // const [ state, dispatch ] = useContext(BookContext)();
   const [ state ] = useContext(BookContext)();
   
   return (
