@@ -46,7 +46,9 @@
   margin: 0px 0 0 20px;
   padding: 0px 20px;
   @include phone-portrait {
-    padding: 10px 50px 10px 10px;
-    width: 100%;
+    padding: 0 0 0 5px;
+    margin:0;
+    width: 95%;
+    font-size: 20px;
   }
 }
