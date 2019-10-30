@@ -19,20 +19,6 @@ const SummaryView = () => {
     }
   });
 
-  // useEffect(
-  //   () => {
-  //     if (state.books && state.categories && !state.selectedCategory) {
-  //       dispatch({
-  //         type: 'SELECTED_CATEGORY',
-  //         payload: book.category
-  //       });
-  //     }
-  //   },
-  //   [state.categories, state.selectedCategory, dispatch]
-  // );
-
-  // console.log('BookPage state.books:', books);
-
   return state.books.length && state.categories.length ? (
     <div className={styles.bookPageContainer}>
       <TitlesSidebarMenu data={state} books={books} selectedCategory={book.category} />

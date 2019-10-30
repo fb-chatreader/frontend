@@ -2,10 +2,10 @@ import React from 'react';
 import styles from '../styles/Summary.module.scss';
 const Summary = (props) => {
   return (
-    <div className={styles.singleBookContainer}>
-      <div>{props.book.title}</div>
-      <div>{props.book.author}</div>
-      <div>{props.book.synopsis}</div>
+    <div className={styles.summaryContainer}>
+      <div className={styles.bookTitle}>{props.book.title}</div>
+      <div className={styles.bookAuthor}>{props.book.author}</div>
+      <div className={styles.bookSynopsis}>{props.book.synopsis}</div>
     </div>
   );
 };

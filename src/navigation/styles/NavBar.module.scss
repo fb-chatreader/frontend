@@ -25,10 +25,12 @@
   align-items: center;
   color: $purpleStuff;
     @include phone-portrait {
+      position: relative;
       display: flex;
       flex-flow: row;
-      // justify-content: space-around;
       padding: 0 10px;
+      top: 10;
+  
     }
 }
 

@@ -1,10 +1,19 @@
-.bookViewContainer {
-	position: relative;
+@import '../../../styles/scss/main.scss';
+
+.bookPageContainer {
+  position: relative;
+  font-size: 20px;
+  padding: 5px;
+  text-align: left;
+  overflow-wrap: word-break;
 	display: flex;
 	flex-flow: row;
-	margin: 0 auto;
-	height: 600px;
-	width: 1000px;
-	// background-color: aquamarine;
-	top: 100px;
+	margin: 10px auto;
+  // top: 100px;
+  @include phone-portrait {
+    font-size: 20px;
+    color:#222;
+    
+  }
 }
+
