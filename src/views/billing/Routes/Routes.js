@@ -8,7 +8,6 @@ import PublicPricePage from '../components/PublicPricePage';
 function Routes() {
   return (
     <>
-      {/* Stipe Routes */}
       <Route path="/chooseplan/:id_token" component={ChoosePlan} />
       <Route path="/publicpricing" component={PublicPricePage} />
       <Route

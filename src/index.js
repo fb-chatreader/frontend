@@ -11,9 +11,7 @@ import './index.scss';
 ReactDOM.render(
   <Providers>
     <Router>
-      <Route path="/">
-        <App />
-      </Route>
+      <App />
     </Router>
   </Providers>,
   document.getElementById('root')

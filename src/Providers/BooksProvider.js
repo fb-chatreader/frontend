@@ -10,7 +10,10 @@ export function BooksProvider(props) {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   const getState = () => {
-    if (!state.books.length) {
+    if (
+      Object.entries(state.books).length === 0 &&
+      state.books.constructor === Object
+    ) {
       axios
         .get('/api/books/')
         .then(res => dispatch({ type: 'POPULATE_BOOKS', payload: res.data }));
