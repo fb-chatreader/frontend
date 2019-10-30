@@ -11,7 +11,7 @@ const SummaryView = () => {
 
   return book ? (
     <div className={styles.bookViewContainer}>
-      <SideMenu state={state} />
+      <SideMenu books={state.books.filter(b => b.category !== book.category)} />
 
       <div className={styles.summaryContainer}>
         <div>{book.title}</div>
