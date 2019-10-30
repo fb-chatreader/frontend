@@ -12,10 +12,13 @@ function App() {
   return (
     <div className={styles.App}>
       <NavBar />
+
       <Route exact path="/">
         <LandingPage />
       </Route>
+
       <BillingRoutes />
+
       <BookRoutes />
     </div>
   );
