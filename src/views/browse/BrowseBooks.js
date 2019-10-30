@@ -2,7 +2,6 @@ import React, { useContext, useEffect } from 'react';
 import { Route } from 'react-router-dom';
 import axios from 'axios';
 import { BookContext } from 'Providers/BooksProvider.js';
-
 import CategoriesView from './categories/CategoriesView';
 import styles from './BrowseBooks.module.scss';
 
@@ -24,7 +23,7 @@ function BrowseBooks() {
     },
     [ state.books, state.categories, dispatch ]
   );
-  
+
   return (
     <Route exact path="/browse">
       <div className={styles.browseBooks}>

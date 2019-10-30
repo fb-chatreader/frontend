@@ -7,8 +7,6 @@
 	flex-flow: column;
 	left: 0;
 	top: 300px;
-	// background-color: violet;
-	// border: 1px solid #ccc;
   overflow-y: scroll;
   @include phone-portrait {
     display:none;

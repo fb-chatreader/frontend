@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import Summary from './components/Summary';
 import TitlesSidebarMenu from './components/TitlesSidebarMenu';
@@ -6,13 +6,12 @@ import { BookContext } from '../../../Providers/BooksProvider';
 import styles from './SummaryView.module.scss';
 
 const SummaryView = () => {
-  const [ state, dispatch ] = useContext(BookContext);
+  const [ state ] = useContext(BookContext);
 
   const { id } = useParams();
   const _id = parseInt(id);
 
   const books = [ ...state.books ];
-  // const books = state.books;
   const book = books.find((e, i) => {
     if (books[i].id === _id) {
       return books[i];

@@ -10,11 +10,9 @@
   overflow-wrap: word-break;
 	display: flex;
 	flex-flow: row;
-  // top: 100px;
   @include phone-portrait {
     font-size: 20px;
     color:#222;
-    
   }
 }
 
