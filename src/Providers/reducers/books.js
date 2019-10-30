@@ -1,25 +1,21 @@
 export const initialState = {
   books: [],
   categories: [],
-  selectedBook: null,
-  selectedCategory: null
+  selected: null
 };
 
 export function reducer(state, action) {
   switch (action.type) {
     case 'POPULATE_BOOKS':
-      console.log('DATA: ', action.payload);
       return {
         ...state,
-        books: action.payload,
+        books: action.payload.sort((a, b) => b.rating_qty - a.rating_qty),
         categories: Array.from(
           new Set(action.payload.map(({ category }) => category))
         ).sort()
       };
-    case 'SELECTED_BOOK':
-      return { ...state, categories: action.payload };
-    case 'SELECTED_CATEGORY':
-      return { ...state, selectedCategory: action.payload };
+    case 'SELECT_CATEGORY':
+      return { ...state, selected: action.payload };
     default:
       return state;
   }

@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { Elements, StripeProvider } from 'react-stripe-elements';
-import SubPlansGrid from './SubPlansGrid';
 import axios from 'axios';
-import styles from './styles/ChoosePlan.module.scss';
+
+import SubPlansGrid from './SubPlansGrid';
+
+import styles from '../styles/ChoosePlan.module.scss';
 
 class PublicPricePage extends Component {
   constructor(props) {
@@ -28,32 +29,26 @@ class PublicPricePage extends Component {
   render() {
     const { products, id_token } = this.state;
     return (
-      <StripeProvider apiKey="pk_test_szSIHpMw6NMiX62i8aL5W82t00VdTotHmW">
-        <Elements>
-          <div className={styles.choosePlan}>
-            <div className={styles.productsContainer}>
-              {products ? (
-                products.map((product, index) => {
-                  console.log('PRODUCT: ', product);
-                  return (
-                    <div className={styles.productContainer} key={index}>
-                      <h2>{product.name}</h2>
-                      <h3>Get premium access with these payment plans:</h3>
-                      <div className={styles.plansContainer}>
-                        <SubPlansGrid product={product} id_token={id_token} />
-                      </div>
-                    </div>
-                  );
-                })
-              ) : (
-                <p>
-                  No products found.
-                </p>
-              )}
-            </div>
-          </div>
-        </Elements>
-      </StripeProvider>
+      <div className={styles.choosePlan}>
+        <div className={styles.productsContainer}>
+          {products ? (
+            products.map((product, index) => {
+              console.log('PRODUCT: ', product);
+              return (
+                <div className={styles.productContainer} key={index}>
+                  <h2>{product.name}</h2>
+                  <h3>Get premium access with these payment plans:</h3>
+                  <div className={styles.plansContainer}>
+                    <SubPlansGrid product={product} id_token={id_token} />
+                  </div>
+                </div>
+              );
+            })
+          ) : (
+            <p>No products found.</p>
+          )}
+        </div>
+      </div>
     );
   }
 }

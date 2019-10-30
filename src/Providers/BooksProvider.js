@@ -18,5 +18,5 @@ export function BooksProvider(props) {
     return [state, dispatch];
   };
 
-  return <Provider value={getState()}>{props.children}</Provider>;
+  return <Provider value={getState}>{props.children}</Provider>;
 }

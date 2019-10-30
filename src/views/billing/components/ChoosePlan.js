@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Elements, StripeProvider } from 'react-stripe-elements';
 import SubPlansGrid from './SubPlansGrid';
 import axios from 'axios';
-import styles from './styles/ChoosePlan.module.scss';
+import styles from '../styles/ChoosePlan.module.scss';
 
 class ChoosePlan extends Component {
   constructor(props) {

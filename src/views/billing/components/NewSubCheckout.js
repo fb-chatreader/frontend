@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { CardElement, injectStripe } from 'react-stripe-elements';
 import axios from 'axios';
-import './css/NewSubCheckout.css';
+import '../styles/NewSubCheckout.css';
 
 class NewSubCheckout extends Component {
   constructor(props) {
@@ -46,9 +46,9 @@ class NewSubCheckout extends Component {
     if (this.state.complete) return <h1>Purchase Complete</h1>;
 
     return (
-      <div className='new-sub-checkout-page'>
+      <div className="new-sub-checkout-page">
         <p>Enter card details to purchase {planNickname} Subscription:</p>
-        <div className='cardelement-container'>
+        <div className="cardelement-container">
           <CardElement />
         </div>
         <button onClick={this.submit}>Submit</button>
