@@ -16,6 +16,16 @@
   }
 }
 
+.headerContent {
+
+}
+
+.bookCover {
+  // position: absolute;
+  width: 200px;
+
+}
+
 .bookTitle {
   width:fit-content;
   margin: 20px 0 0 0;
@@ -33,10 +43,10 @@
   color:#000;
   font-size: 18px;
   font-weight: 600;
-  padding: 10px 0;
+  padding: 10px 0 10px 40px;
   text-align: start;
   @include phone-portrait {
-    padding: 10px 50px 10px 10px;
+    padding: 10px 50px 10px 40px;
     width: 100%;
   }
 }
@@ -45,10 +55,12 @@
   color:#000;
   margin: 0px 0 0 20px;
   padding: 0px 20px;
+  height: 600px;
   @include phone-portrait {
     padding: 0 0 0 5px;
     margin:0;
     width: 95%;
+    height: 600px;
     @include fontSizeAdj;
   }
 }

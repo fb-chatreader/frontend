@@ -1,9 +1,5 @@
 // @import '../main.scss';
-/*
-  - set global constant font size,
-  - calc 
-*/
 
 @mixin fontSizeAdj {
-  font-size: calc(1px + (20 - 16) * ((100vw - 300px) / (1600 - 300)));;
+  font-size: calc(16px + (20 - 16) * ((100vw - 300px) / (1600 - 300)));;
 }

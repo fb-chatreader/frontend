@@ -1,7 +1,8 @@
 @import '../../../styles/scss/main.scss';
 
 .bookPageContainer {
-  width:1000px;
+  max-width:1000px;
+  width:100%;
   position: relative;
 	margin: 10px auto;
   font-size: 20px;
