@@ -1,7 +1,6 @@
 export const initialState = {
   books: [],
-  categories: [],
-  selected: null
+  categories: []
 };
 
 export function reducer(state, action) {
@@ -14,8 +13,6 @@ export function reducer(state, action) {
           new Set(action.payload.map(({ category }) => category))
         ).sort()
       };
-    case 'SELECT_CATEGORY':
-      return { ...state, selected: action.payload };
     default:
       return state;
   }

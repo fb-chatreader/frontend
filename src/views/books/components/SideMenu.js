@@ -7,7 +7,11 @@ const TitlesSidebarMenu = ({ books }) => {
     <div className={styles.titlesMenuContainer}>
       {books ? (
         books.map(b => {
-          return <Link to={`/summary/${b.id}`}>{b.title}</Link>;
+          return (
+            <Link key={b.id} to={`/summary/${b.id}`}>
+              {b.title}
+            </Link>
+          );
         })
       ) : (
         <p>Loading titles...</p>

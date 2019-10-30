@@ -1,13 +1,19 @@
 .menuContainer {
-	// position: fixed;
-	// top: 100px;
-	width: 275px;
-	padding: 10px;
-	display: flex;
-	flex-flow: column;
+  // position: fixed;
+  // top: 100px;
+  width: 275px;
+  padding: 10px;
+  display: flex;
+  flex-flow: column;
 }
 
-.filterOption:hover {
-	cursor: pointer;
-	color: blue;
+.filterOption {
+  display: block;
+  text-decoration: none;
+  color: black;
+
+  &:hover {
+    cursor: pointer;
+    color: blue;
+  }
 }

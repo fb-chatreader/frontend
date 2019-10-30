@@ -1,8 +1,6 @@
 .browseBooks {
   display: flex;
-  flex-direction: row;
   justify-content: space-around;
-  align-items: flex-end;
   // .genreMenu {
   //   margin: 5px;
   // }
@@ -19,8 +17,10 @@
     flex-direction: column;
 
     .gridContainer {
-      margin-left: auto;
-      margin-right: auto;
+      display: flex;
+      flex-wrap: wrap;
+      //   margin-left: auto;
+      //   margin-right: auto;
     }
   }
 }
