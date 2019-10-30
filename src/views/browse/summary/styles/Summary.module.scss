@@ -49,6 +49,6 @@
     padding: 0 0 0 5px;
     margin:0;
     width: 95%;
-    font-size: 20px;
+    @include fontSizeAdj;
   }
 }

@@ -4,7 +4,7 @@ import NavLinksNonAuth from './NavLinksNonAuth';
 import styles from './styles/NavBar.module.scss';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
-import RESP_DEVICE_WIDTHS from '../styles/constants';
+import RESP_DEVICE_WIDTHS from '../styles/scss/constants';
 
 // Currently NavBar only renders NavNonAuth
 // If we implement authentication, we can create a NavLinksAuth with different links and styling
