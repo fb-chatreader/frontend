@@ -1,6 +1,7 @@
 .App {
   margin: 0 auto;
-  display: flex;
+  display: unset;
 	flex-direction: column;
   justify-content: flex-start;
+  width:100%;
 }
