@@ -6,12 +6,13 @@ const TitlesSidebarMenu = (props) => {
   console.log('TitlesMenu props.data.selectedCategory:', props.data.selectedCategory);
   return (
     <div className={styles.titlesMenuContainer}>
+      <h1 className={styles.additionalCatTitles}>Also In This Category:</h1>
       {props.books && props.selectedCategory ? (
         props.books
           .filter((b) => b.category === props.selectedCategory)
           .sort((a, b) => b.rating_qty - a.rating_qty)
           .map((b) => {
-            return <Link to={`/summary/${b.id}`}>{b.title}</Link>;
+            return <Link className={styles.titleLink} to={`/summary/${b.id}`}>{b.title}</Link>;
           })
       ) : (
         <p>Loading titles...</p>
