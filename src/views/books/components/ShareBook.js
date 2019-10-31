@@ -8,14 +8,13 @@ import {
 
 import { SMS } from 'util/smsLinkCreator';
 import { FacebookIcon, TwitterIcon, EmailIcon } from 'react-share';
-
-import '../styles/ShareBook.module.scss';
+import styles from '../styles/ShareBook.module.scss';
 
 function ShareBook(props) {
   const shareUrl = `${process.env.REACT_APP_MESSENGER_URL}?ref=command=start_book,book_id=${props.book_id}`;
 
   return (
-    <div className="btn-container">
+    <div className={styles.btnContainer}>
       <FacebookShareButton url={shareUrl} className="icon-button">
         <FacebookIcon size={32} round={true} />
       </FacebookShareButton>

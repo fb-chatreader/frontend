@@ -1,13 +1,10 @@
-@import 'src/styles/scss/main.scss';
+@import 'styles/main.scss';
 
 .navbar {
-	width: 100%;
-	padding: 0;
+  width: 100%;
+  padding: 0;
   z-index: 1100;
 
-  @include tablet-portrait {
-    
-  }
   @include phone-portrait {
     display: flex;
     flex-flow: row;
@@ -17,19 +14,20 @@
 
 .navBarContents {
   max-width: 1000px;
-  width:100%;
+  width: 100%;
   margin: 0 auto;
   display: flex;
   flex-flow: row;
   justify-content: space-between;
   align-items: center;
   color: $purpleStuff;
-    @include phone-portrait {
-      display: flex;
-      flex-flow: row;
-      // justify-content: space-around;
-      padding: 0 10px;
-    }
+  @include phone-portrait {
+    position: relative;
+    display: flex;
+    flex-flow: row;
+    // padding: 0 10px;
+    top: 10;
+  }
 }
 
 .linksContainter {
@@ -40,21 +38,20 @@
 
 .menuBtnContainer {
   margin: 0;
-  padding:0;
-
+  padding: 0;
 }
 
 .menuBtn {
   color: $softRed;
   display: none;
-  padding:5px;
+  padding: 5px;
   border: solid 1px $softRed;
   border-radius: 3px;
-  margin:0;
-  transition:  1000ms;
+  margin: 0;
+  transition: 1000ms;
   &:hover {
     background-color: $softRed;
-    color:#fff;
+    color: #fff;
     font-weight: 800;
   }
   @include phone-portrait {
@@ -63,10 +60,10 @@
 }
 
 .appName {
-  color:$activeLinkGray;
+  color: $activeLinkGray;
   display: flex;
   flex-flow: row;
-  
+  font-size: 26px;
   @include tablet-portrait {
     width: 100%;
     display: flex;
@@ -79,6 +76,5 @@
     display: flex;
     flex-flow: row;
     justify-content: flex-start;
-    
   }
 }

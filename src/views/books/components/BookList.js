@@ -18,7 +18,11 @@ function BookList(props) {
         state.books
           .filter(b => b.category === category)
           .map(b => <BookCard key={b.id} book={b} />)}
-      {props.empty && <p>Please select a category to continue!</p>}
+      {props.empty && (
+        <div className={styles.emptyContainer}>
+          <p className={styles.empty}>Please select a category to continue!</p>
+        </div>
+      )}
     </div>
   );
 }

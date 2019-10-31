@@ -1,0 +1,4 @@
+
+@mixin fontSizeAdj {
+  font-size: calc(20px + (20 - 16) * ((100vw - 300px) / (1600 - 300)));;
+}

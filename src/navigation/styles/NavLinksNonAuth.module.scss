@@ -1,25 +1,22 @@
-@import 'src/styles/scss/main.scss';
+@import 'styles/main.scss';
 
 .navLinksNonAuth {
-	// width: 50%;
-	min-width: 211px;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
+  // width: 50%;
+  min-width: 211px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   color: $purpleStuff;
   font-weight: 800;
   font-size: 18px;
   @include tablet-portrait {
-    
   }
-
-  
 }
 
 .navLink {
   text-decoration: none;
   color: $inActiveLinkGray;
-	margin: 5px;
+  margin: 5px;
 }
 
 .navLink:hover {

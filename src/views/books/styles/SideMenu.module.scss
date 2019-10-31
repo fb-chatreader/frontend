@@ -1,11 +1,46 @@
-.titlesMenuContainer {
-	width: 300px;
-	height: 600px;
-	display: flex;
-	flex-flow: column;
-	left: 0;
-	top: 300px;
-	// background-color: violet;
-	border: 1px solid #ccc;
-	overflow-y: scroll;
+@import 'styles/main.scss';
+
+.menuContainer {
+  width: 275px;
+  display: flex;
+  flex-flow: column;
+
+  @include phone-portrait {
+    width: 100%;
+  }
+}
+
+.categoriesHeader {
+  font-weight: 900;
+  font-size: 40px;
+  margin: 0;
+  padding: 0 10px;
+}
+
+.filterOptionContainer {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  padding: 0;
+  @include phone-portrait {
+    font-size: 30px;
+    display: flex;
+    padding: 0px 10px;
+    margin: 10px 0px;
+    flex-direction: column;
+    flex-flow: wrap;
+    justify-content: space-between;
+  }
+}
+
+.filterOption {
+  color: $purpleStuff;
+  font-weight: 900;
+  @include phone-portrait {
+  }
+}
+
+.filterOption:hover {
+  cursor: pointer;
+  color: $softRed;
 }

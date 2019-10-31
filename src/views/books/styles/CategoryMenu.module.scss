@@ -1,10 +1,18 @@
+@import 'styles/main.scss';
+
 .menuContainer {
-  // position: fixed;
-  // top: 100px;
   width: 275px;
-  padding: 10px;
+  padding: 0 10px 10px;
   display: flex;
   flex-flow: column;
+
+  h3 {
+    margin-top: 0;
+  }
+
+  @include phone-portrait {
+    flex-direction: column;
+  }
 }
 
 .filterOption {
