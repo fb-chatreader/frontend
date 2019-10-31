@@ -1,20 +1,20 @@
 import React, { useContext } from 'react';
 import { useParams } from 'react-router-dom';
 
-import SideMenu from './SideMenu';
+import SideMenu from './TitlesSideMenu';
 import { BookContext } from 'Providers/BooksProvider';
 import styles from '../styles/Summary.module.scss';
 
-const SummaryView = () => {
-  const [state] = useContext(BookContext)();
+const Summary = () => {
+  const [ state ] = useContext(BookContext)();
   const id = parseInt(useParams().id, 10);
-  const book = state.books.find(b => b.id === id);
+  const book = state.books.find((b) => b.id === id);
   let loadingText = 'Loading book...';
 
   setTimeout(() => (loadingText = 'Could not find that book'), 2000);
   return book ? (
     <div className={styles.bookPageContainer}>
-      <SideMenu books={state.books.filter(b => b.category === book.category)} />
+      <SideMenu books={state.books.filter((b) => b.category === book.category)} />
 
       <div className={styles.summaryContainer}>
         <div className={styles.header}>
@@ -29,4 +29,4 @@ const SummaryView = () => {
   );
 };
 
-export default SummaryView;
+export default Summary;

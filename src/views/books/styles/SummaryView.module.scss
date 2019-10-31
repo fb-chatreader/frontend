@@ -1,0 +1,24 @@
+@import '../../../styles/scss/main.scss';
+
+.bookPageContainer {
+  max-width:1000px;
+  width:100%;
+  position: relative;
+	margin: 10px auto;
+  font-size: 20px;
+  padding: 5px;
+  text-align: left;
+  overflow-wrap: word-break;
+	display: flex;
+	flex-flow: row;
+  @include phone-portrait {
+    font-size: 24px;
+    color:#222;
+    padding-top: 0;
+    margin-top: 0;
+  }
+}
+
+.additionalCatTitles {
+
+}
