@@ -1,0 +1,86 @@
+@import 'styles/main.scss';
+
+.bookPageContainer {
+  max-width: 1000px;
+  width: 100%;
+  position: relative;
+  margin: 10px auto;
+  font-size: 20px;
+  padding: 5px;
+  text-align: left;
+  overflow-wrap: word-break;
+  display: flex;
+  flex-flow: row;
+
+  @include phone-portrait {
+    font-size: 24px;
+    color: #222;
+    padding-top: 0;
+    margin-top: 0;
+  }
+}
+
+.summaryContainer {
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column;
+  width: 800px;
+  top: 100px;
+  font-size: 44;
+  border-left: solid 1px #ddd;
+  color: purple;
+
+  @include phone-portrait {
+    border: none;
+    width: 100vw;
+    margin: 0;
+  }
+}
+
+.headerContent {
+}
+
+.bookCover {
+  // position: absolute;
+  width: 200px;
+}
+
+.title {
+  width: fit-content;
+  margin: 20px 0 0 0;
+  padding: 10px 20px;
+  background-color: #99ccff;
+  color: #333;
+  font-size: 28px;
+  font-weight: 800;
+  @include phone-portrait {
+    padding: 10px 50px 10px 10px;
+  }
+}
+
+.author {
+  color: #000;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 10px 0 10px 40px;
+  text-align: start;
+  @include phone-portrait {
+    padding: 10px 50px 10px 40px;
+    width: 100%;
+  }
+}
+
+.synopsis {
+  color: #000;
+  margin: 0px 0 0 20px;
+  padding: 0px 20px;
+  height: 600px;
+  font-size: 18px;
+  @include phone-portrait {
+    padding: 0 0 0 5px;
+    margin: 0;
+    width: 95%;
+    height: 600px;
+    @include fontSizeAdj;
+  }
+}

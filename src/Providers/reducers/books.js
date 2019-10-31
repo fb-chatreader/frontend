@@ -8,13 +8,13 @@ export const initialState = {
 export function reducer(state, action) {
   switch (action.type) {
     case 'POPULATE_BOOKS':
-      return { ...state, books: action.payload };
-    case 'POPULATE_CATEGORIES':
-      return { ...state, categories: action.payload };
-      case 'SELECTED_BOOK':
-        return { ...state, categories: action.payload };
-      case 'SELECTED_CATEGORY':
-        return { ...state, selectedCategory: action.payload };
+      return {
+        ...state,
+        books: action.payload.sort((a, b) => b.rating_qty - a.rating_qty),
+        categories: Array.from(
+          new Set(action.payload.map(({ category }) => category))
+        ).sort()
+      };
     default:
       return state;
   }

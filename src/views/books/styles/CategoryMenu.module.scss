@@ -1,0 +1,27 @@
+@import 'styles/main.scss';
+
+.menuContainer {
+  width: 275px;
+  padding: 0 10px 10px;
+  display: flex;
+  flex-flow: column;
+
+  h3 {
+    margin-top: 0;
+  }
+
+  @include phone-portrait {
+    flex-direction: column;
+  }
+}
+
+.filterOption {
+  display: block;
+  text-decoration: none;
+  color: black;
+
+  &:hover {
+    cursor: pointer;
+    color: blue;
+  }
+}

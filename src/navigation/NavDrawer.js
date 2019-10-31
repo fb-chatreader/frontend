@@ -10,7 +10,7 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import SearchIcon from '@material-ui/icons/Search';
 import HomeIcon from '@material-ui/icons/Home';
-import IconButton from '@material-ui/core/IconButton';
+// import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import NavLinksNonAuth from './NavLinksNonAuth';
 import styles from './styles/NavBar.module.scss';
@@ -26,18 +26,22 @@ const useStyles = makeStyles({
 
 export default function NavBar() {
   const classes = useStyles();
-  const [ state, setState ] = React.useState({
+  const [state, setState] = React.useState({
     left: false
   });
 
-  const toggleDrawer = (side, open) => (event) => {
-    if (event && event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+  const toggleDrawer = (side, open) => event => {
+    if (
+      event &&
+      event.type === 'keydown' &&
+      (event.key === 'Tab' || event.key === 'Shift')
+    ) {
       return;
     }
     setState({ ...state, [side]: open });
   };
 
-  const sideList = (side) => (
+  const sideList = side => (
     <div
       className={classes.list}
       role="presentation"
@@ -100,7 +104,10 @@ export default function NavBar() {
 
   return (
     <div className={styles.navBarContents}>
-      <Button className={styles.menuBtnContainer} onClick={toggleDrawer('left', true)}>
+      <Button
+        className={styles.menuBtnContainer}
+        onClick={toggleDrawer('left', true)}
+      >
         <MenuIcon className={styles.menuBtn} fontSize={'large'} />
       </Button>
       <div className={styles.appName}>
@@ -109,7 +116,11 @@ export default function NavBar() {
       <div className={styles.linksContainter}>
         <NavLinksNonAuth />
       </div>
-      <SwipeableDrawer open={state.left} onClose={toggleDrawer('left', false)} onOpen={toggleDrawer('left', true)}>
+      <SwipeableDrawer
+        open={state.left}
+        onClose={toggleDrawer('left', false)}
+        onOpen={toggleDrawer('left', true)}
+      >
         {sideList('left')}
       </SwipeableDrawer>
     </div>

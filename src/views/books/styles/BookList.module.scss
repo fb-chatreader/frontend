@@ -1,0 +1,73 @@
+@import 'styles/main.scss';
+$woman-reading: '../../../assets/woman_reading_2.jpg';
+
+.browseBooks {
+  display: flex;
+  justify-content: space-around;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+
+  @include phone-portrait {
+    flex-direction: column;
+  }
+  .filterOption:hover {
+    cursor: pointer;
+  }
+}
+
+// .browseBooks {
+// 	display: flex;
+// 	justify-content: space-around;
+//   align-items: flex-end;
+//   margin: 0 auto;
+
+// 	.filterOption:hover {
+// 		cursor: pointer;
+// 	}
+// }
+
+// @media (max-width: 1100px) {
+// .browseCatsContainer {
+//   flex-direction: column;
+
+.gridContainer {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  max-width: 1100px;
+}
+
+.emptyContainer {
+  margin-top: 18px;
+  left: 300px;
+  background: url($woman-reading);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include phone-portrait {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+  }
+}
+
+.empty {
+  width: 700px;
+  left: 300px;
+  padding: 60px;
+  background-color: rgba(255, 255, 255, 0);
+  color: #fff;
+  font-weight: 800;
+  font-size: 80px;
+  line-height: 0.7;
+
+  @include phone-portrait {
+    width: auto;
+    padding: 0px 37px;
+    font-size: 53px;
+    margin: 14px 0px;
+  }
+}
