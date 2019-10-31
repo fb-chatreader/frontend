@@ -1,16 +1,16 @@
-@import 'styles/main.scss';
+@import '../../../styles/main.scss';
 
 .menuContainer {
-  width: 275px;
-  display: flex;
+	width: 275px;
+	display: flex;
   flex-flow: column;
-
   @include phone-portrait {
     width: 100%;
   }
 }
 
 .categoriesHeader {
+  // text-align: center;
   font-weight: 900;
   font-size: 40px;
   margin: 0;
@@ -34,13 +34,14 @@
 }
 
 .filterOption {
-  color: $purpleStuff;
+  color:$purpleStuff;
   font-weight: 900;
   @include phone-portrait {
+
   }
 }
 
 .filterOption:hover {
-  cursor: pointer;
-  color: $softRed;
+	cursor: pointer;
+	color:$softRed;
 }
