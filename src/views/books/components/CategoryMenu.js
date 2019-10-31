@@ -19,7 +19,8 @@ const CategoryMenu = props => {
             key={category}
             activeStyle={{ backgroundColor: 'rgba(0,0,0,0.1)' }}
           >
-            {category}({state.books[category].length})
+            {category} (
+            {state.books.filter(b => b.category === category).length})
           </NavLink>
         ))}
       </ul>

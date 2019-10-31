@@ -7,20 +7,11 @@ import styles from '../styles/Summary.module.scss';
 const SummaryView = () => {
   const [state] = useContext(BookContext)();
   const id = parseInt(useParams().id, 10);
-  let book;
-
-  for (let cat in state.books) {
-    const found = state.books[cat].find(b => b.id === id);
-
-    if (found) {
-      book = found;
-      break;
-    }
-  }
+  const book = state.books.find(b => b.id === id);
 
   return book ? (
     <div className={styles.bookViewContainer}>
-      <SideMenu books={state.books[book.category]} />
+      <SideMenu books={state.books.filter(b => b.category === book.category)} />
 
       <div className={styles.summaryContainer}>
         <div>{book.title}</div>
