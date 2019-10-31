@@ -12,18 +12,18 @@
   }
 }
 
-@media (max-width: 1100px) {
-  .browseCatsContainer {
-    flex-direction: column;
+// @media (max-width: 1100px) {
+// .browseCatsContainer {
+//   flex-direction: column;
 
-    .gridContainer {
-      display: flex;
-      flex-wrap: wrap;
-      //   margin-left: auto;
-      //   margin-right: auto;
-    }
-  }
+.gridContainer {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  max-width: 1100px;
 }
+// }
+// }
 
 // .menusContainer {
 // 	width: 100%;

@@ -5,7 +5,7 @@ import SummaryView from 'views/books/components/Summary';
 import CategoryMenu from 'views/books/components/CategoryMenu';
 import BookList from 'views/books/components/BookList';
 
-import styles from '../styles/Routes.module.scss';
+import styles from '../styles/BookList.module.scss';
 
 function Routes(props) {
   return (
