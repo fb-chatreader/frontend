@@ -3,6 +3,8 @@ import { useParams } from 'react-router-dom';
 import { BookContext } from 'Providers/BooksProvider';
 // import { Link } from 'react-router-dom';
 import ShareBook from './ShareBook';
+import { CopyToClipboard } from "react-copy-to-clipboard";
+import LinkIcon from "@material-ui/icons/Link";
 import styles from '../styles/SingleBookPage.module.scss';
 
 const SingleBookPage= () => {
@@ -23,18 +25,29 @@ const SingleBookPage= () => {
             <div className={styles.footer}>
                 <h4 className={styles.authorText}>By {book.author}</h4>
                 <div className={styles.cardActions}>
-                <div className={styles.summaryBtn}>
-                    <button
-                    onClick={() =>
-                        window.open(
-                        `${process.env.REACT_APP_MESSENGER_URL}?ref=book_id=${book.id}`
-                        )
-                    }
+                    <div className={styles.summaryBtn}>
+                        <button
+                            onClick={() =>
+                                window.open(
+                                `${process.env.REACT_APP_MESSENGER_URL}?ref=book_id=${book.id}`
+                                )
+                            }
+                        >
+                            Read Summary!
+                        </button>
+                    </div>
+                    <CopyToClipboard
+                        text={`${process.env.REACT_APP_MESSENGER_URL}?ref=book_id=${book.id}`}
+                        onCopy={() => {
+                            alert('Copied to clipboard');
+                        }}
+                        title='Copy link'
                     >
-                    Read Summary!
-                    </button>
-                </div>
-                <ShareBook book_id={book.id} />
+                        <button>
+                            <LinkIcon />
+                        </button>
+                    </CopyToClipboard>
+                    <ShareBook book_id={book.id} />
                 </div>
             </div>
         </div>
