@@ -3,15 +3,12 @@ import { useParams } from 'react-router-dom';
 import { BookContext } from 'Providers/BooksProvider';
 // import { Link } from 'react-router-dom';
 import ShareBook from './ShareBook';
-import { CopyToClipboard } from "react-copy-to-clipboard";
-import LinkIcon from "@material-ui/icons/Link";
 import styles from '../styles/SingleBookPage.module.scss';
 
 const SingleBookPage= () => {
     const [state] = useContext(BookContext)();
     const id = parseInt(useParams().id, 10);
     const book = state.books.filter(b => b.id === id)[0];
-    console.log(book);
     return book ? ( 
         <div className={styles.SingleBookPage}>
             <div className={styles.header}>
@@ -36,17 +33,6 @@ const SingleBookPage= () => {
                             Read Summary!
                         </button>
                     </div>
-                    <CopyToClipboard
-                        text={`${process.env.REACT_APP_MESSENGER_URL}?ref=book_id=${book.id}`}
-                        onCopy={() => {
-                            alert('Copied to clipboard');
-                        }}
-                        title='Copy link'
-                    >
-                        <button>
-                            <LinkIcon />
-                        </button>
-                    </CopyToClipboard>
                     <ShareBook book_id={book.id} />
                 </div>
             </div>
