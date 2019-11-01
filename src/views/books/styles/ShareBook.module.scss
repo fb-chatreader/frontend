@@ -1,28 +1,32 @@
 @import 'styles/main.scss';
 
 .btnContainer {
-  display: flex;
-  flex-flow: row;
-  height: 40px;
+	display: flex;
+	flex-flow: row;
+	height: 40px;
 
-  @include phone-portrait {
-    display: flex;
-    flex-flow: row;
-    width: 150px;
-    height: 20px;
-    justify-content: space-between;
-    margin-right: 10px;
-  }
-  .icon-button {
-    margin: 3px;
-    @include phone-portrait {
-      display: flex;
-      flex-flow: row;
-      width: 150px;
-      height: 40px;
-    }
-  }
-  .sms-icon-button {
-    margin: 3px;
-  }
+	@include phone-portrait {
+		display: flex;
+		flex-flow: row;
+		width: 150px;
+		height: 20px;
+		justify-content: space-between;
+		margin-right: 10px;
+	}
+	.icon-button {
+		margin: 3px;
+		@include phone-portrait {
+			display: flex;
+			flex-flow: row;
+			width: 150px;
+			height: 40px;
+		}
+	}
+	.sms-icon-button {
+		margin: 3px;
+	}
+
+	.linkBtn {
+		border-radius: 50%;
+	}
 }
