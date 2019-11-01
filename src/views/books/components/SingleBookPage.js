@@ -9,7 +9,6 @@ const SingleBookPage= () => {
     const [state] = useContext(BookContext)();
     const id = parseInt(useParams().id, 10);
     const book = state.books.filter(b => b.id === id)[0];
-    console.log(book);
     return book ? ( 
         <div className={styles.SingleBookPage}>
             <div className={styles.header}>
@@ -20,21 +19,25 @@ const SingleBookPage= () => {
                 />
                 <h2 className={styles.titleText}>{book.title}</h2>
             </div>
+            
             <div className={styles.footer}>
                 <h4 className={styles.authorText}>By {book.author}</h4>
-                <div className={styles.cardActions}>
-                <div className={styles.summaryBtn}>
-                    <button
-                    onClick={() =>
-                        window.open(
-                        `${process.env.REACT_APP_MESSENGER_URL}?ref=book_id=${book.id}`
-                        )
-                    }
-                    >
-                    Read Summary!
-                    </button>
+                <div className={styles.contentSection}>
+                    <p className={styles.authorText}>{book.synopsis}</p>
                 </div>
-                <ShareBook book_id={book.id} />
+                <div className={styles.cardActions}>
+                    <div className={styles.summaryBtn}>
+                        <button
+                            onClick={() =>
+                                window.open(
+                                `${process.env.REACT_APP_MESSENGER_URL}?ref=book_id=${book.id}`
+                                )
+                            }
+                        >
+                            Read Summary!
+                        </button>
+                    </div>
+                    <ShareBook book_id={book.id} />
                 </div>
             </div>
         </div>
