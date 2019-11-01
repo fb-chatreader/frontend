@@ -19,8 +19,12 @@ const SingleBookPage= () => {
                 />
                 <h2 className={styles.titleText}>{book.title}</h2>
             </div>
+            
             <div className={styles.footer}>
                 <h4 className={styles.authorText}>By {book.author}</h4>
+                <div className={styles.contentSection}>
+                    <p className={styles.authorText}>{book.synopsis}</p>
+                </div>
                 <div className={styles.cardActions}>
                     <div className={styles.summaryBtn}>
                         <button
