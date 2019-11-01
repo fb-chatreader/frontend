@@ -12,7 +12,7 @@ import { FacebookIcon, TwitterIcon, EmailIcon } from 'react-share';
 import styles from '../styles/ShareBook.module.scss';
 
 function ShareBook(props) {
-  const shareUrl = `${process.env.REACT_APP_MESSENGER_URL}?ref=command=start_book,book_id=${props.book_id}`;
+  const shareUrl = `${process.env.REACT_APP_MESSENGER_URL}?ref=book_id=${props.book_id}`;
 
   return (
     <div className={styles.btnContainer}>
