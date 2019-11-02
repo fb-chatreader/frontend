@@ -8,6 +8,7 @@ import {
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import LinkIcon from "@material-ui/icons/Link";
 import { SMS } from 'util/smsLinkCreator';
+import CopyLinkButton from 'util/CopyLinkButton';
 import { FacebookIcon, TwitterIcon, EmailIcon } from 'react-share';
 import styles from '../styles/ShareBook.module.scss';
 
@@ -16,17 +17,7 @@ function ShareBook(props) {
 
   return (
     <div className={styles.btnContainer}>
-      <CopyToClipboard
-        text={`${process.env.REACT_APP_MESSENGER_URL}?ref=book_id=${props.book_id}`}
-        onCopy={() => {
-            alert('Copied to clipboard');
-        }}
-        title='Copy link'
-      >
-        <button className={styles.linkBtn}>
-            <LinkIcon />
-        </button>
-      </CopyToClipboard>
+      <CopyLinkButton />
       <FacebookShareButton url={shareUrl} className="icon-button">
         <FacebookIcon size={32} round={true} />
       </FacebookShareButton>
