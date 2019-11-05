@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import { BookContext } from 'Providers/BooksProvider';
-// import { Link } from 'react-router-dom';
 import ShareBook from './ShareBook';
 import styles from '../styles/SingleBookPage.module.scss';
 

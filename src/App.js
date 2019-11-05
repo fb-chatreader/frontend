@@ -9,6 +9,8 @@ import BookRoutes from 'views/books/Routes';
 import styles from './App.module.scss';
 
 function App() {
+  console.log(document.getElementsByTagName('head')[0]);
+
   return (
     <div className={styles.App}>
       <NavBar />

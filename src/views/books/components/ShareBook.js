@@ -1,31 +1,34 @@
 import React from 'react';
 
-import {
-  FacebookShareButton,
-  TwitterShareButton,
-  EmailShareButton
-} from 'react-share';
+import { FacebookShareButton, TwitterShareButton, EmailShareButton } from 'react-share';
 
 import { SMS } from 'util/smsLinkCreator';
 import { FacebookIcon, TwitterIcon, EmailIcon } from 'react-share';
+import socialMetaTags from '../../../util/share/socialShareMetaTags';
 import styles from '../styles/ShareBook.module.scss';
 
 function ShareBook(props) {
-  const shareUrl = `${process.env.REACT_APP_MESSENGER_URL}?ref=command=start_book,book_id=${props.book_id}`;
-
+  const { image_url, id, title, synopsis } = props.book.book;
+  const shareUrl = `${process.env.REACT_APP_MESSENGER_URL}?ref=command=start_book,book_id=${props.book.book}`;
+  const toShare = {
+    image: image_url,
+    url: id,
+    title,
+    description: synopsis
+  };
   return (
     <div className={styles.btnContainer}>
-      <FacebookShareButton url={shareUrl} className="icon-button">
+      <FacebookShareButton url={shareUrl} className="icon-button" onClick={() => socialMetaTags(toShare)}>
         <FacebookIcon size={32} round={true} />
       </FacebookShareButton>
-      <TwitterShareButton url={shareUrl} className="icon-button">
+      <TwitterShareButton url={shareUrl} className="icon-button" onClick={() => socialMetaTags(toShare)}>
         <TwitterIcon size={32} round={true} />
       </TwitterShareButton>
-      <EmailShareButton url={shareUrl} className="icon-button">
+      <EmailShareButton url={shareUrl} className="icon-button" onClick={() => socialMetaTags(toShare)}>
         <EmailIcon size={32} round={true} />
       </EmailShareButton>
       <div className="sms-icon-button">
-        <SMS data={shareUrl} />
+        <SMS data={shareUrl} onClick={() => socialMetaTags(toShare)} />
       </div>
     </div>
   );

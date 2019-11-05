@@ -26,8 +26,6 @@ const SummaryView = () => {
   ) : (
     <p>Loading BookPage...</p>
   );
-
- 
 };
 
 export default SummaryView;
