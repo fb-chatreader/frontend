@@ -13,16 +13,15 @@ import { FacebookIcon, TwitterIcon, EmailIcon } from 'react-share';
 import styles from '../styles/ShareBook.module.scss';
 
 function ShareBook(props) {
-  const shareUrl = `${process.env.REACT_APP_MESSENGER_URL}?ref=book_id=${props.book_id}`;
+  // const shareUrl = `${process.env.REACT_APP_MESSENGER_URL}?ref=book_id=${props.book_id}`;
+  const shareUrl = `${process.env.REACT_APP_URL}/singlebook/${props.book_id}`;
 
   return (
     <div className={styles.btnContainer}>
-      <CopyLinkButton />
-      <div
-        class="fb-share-button"
-        data-href="https://chatreader.netlify.com/"
-        data-layout="button_count"
-      ></div>
+      <CopyLinkButton toCopy={shareUrl} />
+      <FacebookShareButton url={shareUrl} className="icon-button">
+        <FacebookIcon size={32} round={true} />
+      </FacebookShareButton>
       <TwitterShareButton url={shareUrl} className="icon-button">
         <TwitterIcon size={32} round={true} />
       </TwitterShareButton>
