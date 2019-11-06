@@ -1,0 +1,21 @@
+.CopyLinkButton {
+	position: relative;
+}
+
+.copiedModal {
+	position: absolute;
+	left: -60px;
+	top: 0;
+	font-size: 12px;
+	color: grey;
+}
+
+.linkBtn {
+	height: 32px;
+	width: 32px;
+	border-radius: 50%;
+	margin: 0 3px 0 3px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

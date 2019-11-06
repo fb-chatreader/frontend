@@ -4,6 +4,7 @@ import { Route } from 'react-router-dom';
 import SummaryView from 'views/books/components/Summary';
 import CategoryMenu from 'views/books/components/CategoryMenu';
 import BookList from 'views/books/components/BookList';
+import SingleBookPage from 'views/books/components/SingleBookPage';
 
 import styles from '../styles/BookList.module.scss';
 
@@ -26,6 +27,10 @@ function Routes(props) {
 
       <Route path="/summary/:id">
         <SummaryView />
+      </Route>
+
+      <Route path="/singlebook/:id">
+        <SingleBookPage />
       </Route>
     </>
   );
