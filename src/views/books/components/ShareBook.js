@@ -5,8 +5,8 @@ import {
   TwitterShareButton,
   EmailShareButton
 } from 'react-share';
-import { CopyToClipboard } from "react-copy-to-clipboard";
-import LinkIcon from "@material-ui/icons/Link";
+import { CopyToClipboard } from 'react-copy-to-clipboard';
+import LinkIcon from '@material-ui/icons/Link';
 import { SMS } from 'util/smsLinkCreator';
 import CopyLinkButton from 'util/CopyLinkButton';
 import { FacebookIcon, TwitterIcon, EmailIcon } from 'react-share';
@@ -18,9 +18,11 @@ function ShareBook(props) {
   return (
     <div className={styles.btnContainer}>
       <CopyLinkButton />
-      <FacebookShareButton url={shareUrl} className="icon-button">
-        <FacebookIcon size={32} round={true} />
-      </FacebookShareButton>
+      <div
+        class="fb-share-button"
+        data-href="https://www.your-domain.com/your-page.html"
+        data-layout="button_count"
+      ></div>
       <TwitterShareButton url={shareUrl} className="icon-button">
         <TwitterIcon size={32} round={true} />
       </TwitterShareButton>
