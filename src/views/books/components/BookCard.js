@@ -28,7 +28,7 @@ function BookCard(props) {
               Read Summary!
             </button>
           </div>
-          <ShareBook book_id={props.book.id} />
+          <ShareBook book={props.book} />
         </div>
       </div>
     </div>
