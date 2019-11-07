@@ -23,7 +23,11 @@ function ShareBook(props) {
       <FacebookShareButton url={shareUrl} className="icon-button">
         <FacebookIcon size={32} round={true} />
       </FacebookShareButton>
-      <TwitterShareButton url={shareUrl} className="icon-button">
+      <TwitterShareButton
+        url={shareUrl}
+        title={socialQuote}
+        className={styles.iconBtn}
+      >
         <TwitterIcon size={32} round={true} />
       </TwitterShareButton>
       <EmailShareButton
