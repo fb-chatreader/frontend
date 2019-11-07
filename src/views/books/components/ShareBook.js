@@ -18,13 +18,13 @@ function ShareBook(props) {
   return (
     <div className={styles.btnContainer}>
       <CopyLinkButton />
-      <FacebookShareButton url={shareUrl} className="icon-button">
+      <FacebookShareButton url={shareUrl} className={styles.iconBtn}>
         <FacebookIcon size={32} round={true} />
       </FacebookShareButton>
-      <TwitterShareButton url={shareUrl} className="icon-button">
+      <TwitterShareButton url={shareUrl} className={styles.iconBtn}>
         <TwitterIcon size={32} round={true} />
       </TwitterShareButton>
-      <EmailShareButton url={shareUrl} className="icon-button">
+      <EmailShareButton url={shareUrl} className={styles.iconBtn}>
         <EmailIcon size={32} round={true} />
       </EmailShareButton>
       <div className="sms-icon-button">
