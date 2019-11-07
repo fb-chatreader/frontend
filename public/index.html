@@ -5,6 +5,27 @@
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#000000" />
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://chatreader.netlify.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Chatwise" />
+    <meta
+      property="og:description"
+      content="Get over 1,000 book summaries read to you through Facebook Messenger!"
+    />
+    <meta property="og:image" content="https://i.imgur.com/zEaCDJx.png" />
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="https://chatreader.netlify.com/" />
+    <meta name="twitter:title" content="Chatwise" />
+    <meta
+      name="twitter:description"
+      content="Get over 1,000 book summaries read to you through Facebook Messenger!"
+    />
+    <meta name="twitter:image" content="https://i.imgur.com/zEaCDJx.png" />
+
     <script src="https://js.stripe.com/v3/"></script>
     <meta
       name="description"
@@ -29,6 +50,19 @@
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="fb-root"></div>
+    <script>
+      (function(d, s, id) {
+        var js,
+          fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src =
+          'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0';
+        fjs.parentNode.insertBefore(js, fjs);
+      })(document, 'script', 'facebook-jssdk');
+    </script>
     <div id="root"></div>
     <!--
       This HTML file is a template.

@@ -13,15 +13,25 @@
 		justify-content: space-between;
 		margin-right: 10px;
 	}
-	.icon-button {
-		margin: 3px;
-		@include phone-portrait {
-			display: flex;
-			flex-flow: row;
-			width: 150px;
-			height: 40px;
+
+	// .icon-button {
+	// 	margin: 3px;
+	// 	@include phone-portrait {
+	// 		display: flex;
+	// 		flex-flow: row;
+	// 		width: 150px;
+	// 		height: 40px;
+	// 	}
+	// }
+
+	.iconBtn {
+		cursor: pointer;
+
+		&:focus {
+			outline: 0;
 		}
 	}
+
 	.sms-icon-button {
 		margin: 3px;
 	}

@@ -5,30 +5,43 @@ import {
   TwitterShareButton,
   EmailShareButton
 } from 'react-share';
-import { CopyToClipboard } from "react-copy-to-clipboard";
-import LinkIcon from "@material-ui/icons/Link";
 import { SMS } from 'util/smsLinkCreator';
 import CopyLinkButton from 'util/CopyLinkButton';
 import { FacebookIcon, TwitterIcon, EmailIcon } from 'react-share';
 import styles from '../styles/ShareBook.module.scss';
 
 function ShareBook(props) {
-  const shareUrl = `${process.env.REACT_APP_MESSENGER_URL}?ref=book_id=${props.book_id}`;
+  const {
+    book: { id, title, author }
+  } = props;
+  // const shareUrl = `${process.env.REACT_APP_MESSENGER_URL}?ref=book_id=${props.book_id}`;
+  const shareUrl = `${process.env.REACT_APP_URL}/singlebook/${id}`;
 
   return (
     <div className={styles.btnContainer}>
-      <CopyLinkButton />
+      <CopyLinkButton toCopy={shareUrl} />
       <FacebookShareButton url={shareUrl} className="icon-button">
         <FacebookIcon size={32} round={true} />
       </FacebookShareButton>
-      <TwitterShareButton url={shareUrl} className="icon-button">
+      <TwitterShareButton
+        url={shareUrl}
+        title={socialQuote}
+        className={styles.iconBtn}
+      >
         <TwitterIcon size={32} round={true} />
       </TwitterShareButton>
-      <EmailShareButton url={shareUrl} className="icon-button">
+      <EmailShareButton
+        url={shareUrl}
+        subject={`[Book Summary] ${title} by ${author}`}
+        body={`Hi, I thought you might like this books summary of ${title} by ${author}\n\nRead Book Summary:`}
+        className="icon-button"
+        openWindow={true}
+      >
         <EmailIcon size={32} round={true} />
       </EmailShareButton>
+
       <div className="sms-icon-button">
-        <SMS data={shareUrl} />
+        <SMS url={shareUrl} book={{ title, author }} />
       </div>
     </div>
   );

@@ -3,18 +3,19 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSms } from '@fortawesome/free-solid-svg-icons';
 import getMobileOperatingSystem from './findDeviceType';
 
-export const SMS = (props) => {
-  const url = props.data;
+export const SMS = ({ url, book: { title, author } }) => {
   const os = getMobileOperatingSystem();
-  if (os === 'Android') {
-    let smsUrl = `sms:?body=${url}`;
-    return (
-      <a href={smsUrl}>
-        <FontAwesomeIcon icon={faSms} className="fa-2x" />
-      </a>
-    );
-  } else if (os === 'iOS') {
-    let smsUrl = `sms:;body=${url}`;
+  const osCharacters = {
+    Android: '?',
+    iOS: '&'
+  };
+  const body = `I thought you might like this book summary of ${title.replace(
+    /#/g,
+    '\\$&'
+  )} by ${author}: ${url}`;
+  if (osCharacters[os]) {
+    let smsUrl = `sms:${osCharacters[os]}body=${body}`;
+
     return (
       <a href={smsUrl}>
         <FontAwesomeIcon icon={faSms} className="fa-2x" />
