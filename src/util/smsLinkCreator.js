@@ -10,7 +10,7 @@ export const SMS = ({ url, book: { title, author } }) => {
     iOS: '&'
   };
   const body = `I thought you might like this book summary of ${title.replace(
-    /[-[\]{}()*+?.,\\^$|#\s]/g,
+    /#/g,
     '\\$&'
   )} by ${author}: ${url}`;
   if (osCharacters[os]) {
