@@ -14,7 +14,7 @@ export const SMS = ({ url, book: { title, author } }) => {
       </a>
     );
   } else if (os === 'iOS') {
-    let smsUrl = `sms:;body=${body}`;
+    let smsUrl = `sms:&body=${body}`;
     return (
       <a href={smsUrl}>
         <FontAwesomeIcon icon={faSms} className="fa-2x" />
